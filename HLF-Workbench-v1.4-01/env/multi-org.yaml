@@ -1,0 +1,34 @@
+# List all Peer orgaznizations
+organizations:
+  digibank:
+    peers:
+      - digibank-peer1:
+          url: grpc://localhost:8052
+          eventUrl: grpc://localhost:8052
+      - digibank-peer2:
+          url: grpc://localhost:8051
+          eventUrl: grpc://localhost:8051
+  magnetocorp:
+    peers:
+      - magnetocorp-peer1:
+          url: grpc://localhost:9051
+          eventUrl: grpc://localhost:9051
+# List the orderer URL
+orderers:
+  orderer.papernet.commercialpaper.com:
+      url: grpc://localhost:7050
+# List teh CA 
+ca:
+  name: ca.server.com
+  url: http://localhost:7054
+
+# List the application channels 
+channels:
+  commercialpaperchannel:
+    orderers:
+      - orderer.papernet.commercialpaper.com
+    peers:
+      digibank-peer1:
+      digibank-peer2:
+      magnetocorp-peer1:
+

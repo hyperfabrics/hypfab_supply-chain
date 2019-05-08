@@ -1,0 +1,32 @@
+# List all Peer orgaznizations
+organizations:
+  digibank:
+    peers:
+      - digibank-peer1:
+          url: grpc://52.205.251.182:8051
+          eventUrl: grpc://52.205.251.182:8051
+
+  magnetocorp:
+    peers:
+      - magnetocorp-peer1:
+          url: grpc://18.212.140.88:9051
+          eventUrl: grpc://18.212.140.88:9051
+# List the orderer URL
+orderers:
+  orderer.commercialpaper.com:
+      url: grpc://52.200.206.97:7050
+# List teh CA 
+ca:
+  name: ca.server.com
+  url: http://54.173.103.244:7054
+
+# List the application channels 
+channels:
+  commercialpaperchannel:
+    orderers:
+      - orderer.commercialpaper.com
+    peers:
+      digibank-peer1:
+      digibank-peer2:
+      magnetocorp-peer1:
+
