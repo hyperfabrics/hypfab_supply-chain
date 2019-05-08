@@ -5,7 +5,7 @@
 killall orderer 2> /dev/null
 
 # Remove the ledger data from the local filesystem
-rm -rf $PWD/../../ledger  2> /dev/null
+rm -rf $PWD/../ledger  2> /dev/null
 # Remove the orderer log
 rm $PWD/../orderer.log  2> /dev/null
 # Remove the genesis & channel files

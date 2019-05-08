@@ -10,7 +10,7 @@ echo "++++++ Cleaning the previous run"
 
 # As Digibank admin create the channel by submitting the transaction
 echo "+++++ Creating the application channel = commercialpaperchannel"
-. set-env.sh  papernet  7050   admin
+. set-env.sh  digibank  8050   admin
 ./create-channel.sh
 
 # Give some time for the transaction to go through

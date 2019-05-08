@@ -182,7 +182,7 @@ Application: &ApplicationDefaults
 
     StrictAdminPolicy:
         Type: ImplicitMeta
-        Rule: "ANY Admins"
+        Rule: "MAJORITY Admins"
  
   Organizations:
 

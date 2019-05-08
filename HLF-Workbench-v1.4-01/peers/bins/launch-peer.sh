@@ -43,7 +43,7 @@ fi
 source set-env.sh   $ORG_NAME  $PORT_NUMBER_BASE   $PEER_NAME
 
 #2. Set the Peer File System Path for writing the ledger
-export CORE_PEER_FILESYSTEMPATH="../ledger" 
+export CORE_PEER_FILESYSTEMPATH="../ledger/$PEER_NAME" 
 
 #3. Create the ledger folders
 mkdir -p $CORE_PEER_FILESYSTEMPATH
@@ -54,7 +54,8 @@ export CORE_PEER_ID=$PEER_NAME
 
 #5. Start the peer
 #   Name of the peer log file
-PEER_LOGS="../ledger/$PEER_NAME/$PEER_NAME.log"
+
+PEER_LOGS="$CORE_PEER_FILESYSTEMPATH/$PEER_NAME.log"
 peer node start 2> $PEER_LOGS &
 
 echo "====>PLEASE Check Peer Log under  $PEER_LOGS"
