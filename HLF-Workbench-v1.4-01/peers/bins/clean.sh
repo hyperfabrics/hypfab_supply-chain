@@ -5,6 +5,6 @@
 killall peer 2> /dev/null
 rm ../*.log  2> /dev/null
 rm ../*.block 2> /dev/null
-rm -rf ../ledger 2> /dev/null
+rm -rf $PWD/../ledger 2> /dev/null
 
 echo "Done."

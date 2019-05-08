@@ -69,7 +69,7 @@ export FABRIC_CFG_PATH="$PWD/.."
 
 #5. Set variables for chaincode
 export GOPATH="$PWD/../../gopath"
-export PAPERCHAINCODE="../../contract"
+export PAPERCHAINCODE="$PWD/../../contract"
 export CURRENT_ORG_NAME=$ORG_NAME
 export CURRENT_IDENTITY=$IDENTITY
 

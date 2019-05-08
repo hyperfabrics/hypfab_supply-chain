@@ -43,7 +43,7 @@ fi
 source set-env.sh   $ORG_NAME  $PORT_NUMBER_BASE   $PEER_NAME
 
 #2. Set the Peer File System Path for writing the ledger
-export CORE_PEER_FILESYSTEMPATH="../ledger/$PEER_NAME" 
+export CORE_PEER_FILESYSTEMPATH="$PWD/../ledger/$PEER_NAME" 
 
 #3. Create the ledger folders
 mkdir -p $CORE_PEER_FILESYSTEMPATH
