@@ -26,6 +26,7 @@ Organizations:
       Admins:
           Type: Signature
           Rule: "OR('PapernetMSP.admin')"
+      
    
 
   - &Digibank
@@ -44,7 +45,8 @@ Organizations:
           Rule: "OR('DigibankMSP.admin')"
     AnchorPeers:
       - Host: localhost
-        Port: 8051
+        Port: 7051
+   
       # You may add additional hosts here
 
   # Added by the Administrator

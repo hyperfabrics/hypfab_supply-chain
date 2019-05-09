@@ -4,6 +4,8 @@
 # Used for generation of he genesis block and the commercialpaper channel tx file
 export FABRIC_CFG_PATH=$PWD/../../config
 
+mkdir -p ../../artefacts
+
 # Genesis block generation
 configtxgen -profile CommercialPaperOrdererGenesis -outputBlock ../../artefacts/commercialpaper-genesis.block -channelID ordererchannel
 
