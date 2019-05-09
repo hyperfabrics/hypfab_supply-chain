@@ -10,7 +10,7 @@ Vagrant.configure("2") do |config|
     config.vm.box = "bento/ubuntu-16.04"
 
     config.ssh.username = 'vagrant'
-    config.ssh.password = 'vagrant'
+    config.ssh.password = 'password'
     config.ssh.insert_key = 'true'
 
 
@@ -30,13 +30,26 @@ Vagrant.configure("2") do |config|
     config.vm.network "forwarded_port", guest: 7052, host: 7052
     config.vm.network "forwarded_port", guest: 7053, host: 7053
     # For Peer Containers
+	config.vm.network "forwarded_port", guest: 8050, host: 8050
     config.vm.network "forwarded_port", guest: 8051, host: 8051
     config.vm.network "forwarded_port", guest: 8052, host: 8052
     config.vm.network "forwarded_port", guest: 8053, host: 8053
+	# For Peer Containers
+	config.vm.network "forwarded_port", guest: 8060, host: 8060	
+    config.vm.network "forwarded_port", guest: 8061, host: 8061
+    config.vm.network "forwarded_port", guest: 8062, host: 8062
+    config.vm.network "forwarded_port", guest: 8063, host: 8063
     # For Peer Containers
+	config.vm.network "forwarded_port", guest: 9050, host: 9050
     config.vm.network "forwarded_port", guest: 9051, host: 9051
     config.vm.network "forwarded_port", guest: 9052, host: 9052
     config.vm.network "forwarded_port", guest: 9053, host: 9053
+	
+	# For Peer Containers
+	config.vm.network "forwarded_port", guest: 9060, host: 9060
+    config.vm.network "forwarded_port", guest: 9061, host: 9061
+    config.vm.network "forwarded_port", guest: 9062, host: 9062
+    config.vm.network "forwarded_port", guest: 9063, host: 9063
 
     # For CA Container
     config.vm.network "forwarded_port", guest: 7054, host: 7054
