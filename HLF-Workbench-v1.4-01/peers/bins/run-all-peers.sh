@@ -31,6 +31,14 @@ echo "++ digibank-peer2 Launching & Joining commercialpaperchannel - will sleep 
 sleep 3s
 ./join-channel.sh
 
+# Launch the digibank-peer3
+echo "++ digibank-peer3 Launching & Joining commercialpaperchannel - will sleep for 3 seconds"
+. set-env.sh  digibank  8060   admin
+./launch-peer.sh digibank  8060   digibank-peer3
+sleep 3s
+./join-channel.sh
+
+
 # Launch the magnetocorp-peer1
 echo "+ magnetocorp-peer1 Launching & Joining commercialpaperchannel - will sleep for 3 seconds"
 . set-env.sh  magnetocorp  9050   admin
@@ -38,4 +46,10 @@ echo "+ magnetocorp-peer1 Launching & Joining commercialpaperchannel - will slee
 sleep 3s
 ./join-channel.sh
 
-echo "Done. All 3 peers launched in background. Please check peer logs at /peers"
+# Launch the magnetocorp-peer2
+echo "+ magnetocorp-peer2 Launching & Joining commercialpaperchannel - will sleep for 3 seconds"
+. set-env.sh  magnetocorp  9060   admin
+./launch-peer.sh magnetocorp  9060   magnetocorp-peer2
+sleep 3s
+./join-channel.sh
+

@@ -38,8 +38,9 @@ echo  "++Creating the Orderer Identity"
 echo  "+Creating the 3 Peer Identities"
 ./gen-peer-identity.sh digibank digibank-peer1
 ./gen-peer-identity.sh digibank digibank-peer2
+./gen-peer-identity.sh digibank digibank-peer3
 ./gen-peer-identity.sh magnetocorp magnetocorp-peer1
-
+./gen-peer-identity.sh magnetocorp magnetocorp-peer2
 # Kill the CA Server process as it is not needed
 # Comment the next line if you would like to keep it running
 killall fabric-ca-server  &> /dev/null
