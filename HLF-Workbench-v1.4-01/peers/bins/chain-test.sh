@@ -9,6 +9,7 @@ function    usage {
 }
 
 export FABRIC_LOGGING_SPEC=info  #debug  #info #warning
+export FABRIC_CFG_PATH=$PWD/../
 
 # Uses the core.yaml file in current folder - copy of core.yaml under cloud/bins/peer
 
@@ -28,7 +29,6 @@ else
 echo "Setting the Orderer to localhost:7050"
     ORDERER_ADDRESS="localhost:7050"
 fi
-
 
 echo "CC Operation : $OPERATION    for   Org: $CURRENT_ORG_NAME"
 
