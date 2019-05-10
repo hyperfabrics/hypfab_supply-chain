@@ -16,7 +16,7 @@ OPERATION=$1
 
 # Test Chaincode related properties
 # Change these if you would like to try out your own chaincode
-export CC_CONSTRUCTOR='{"Args":["init","a","100","b","200"]}'
+export CC_CONSTRUCTOR='{"Args":["instantiate"]}'
 export CC_NAME="commercialpaper"
 export CC_PATH="../../contract"
 export CC_VERSION="1.0"
@@ -45,15 +45,24 @@ case $OPERATION in
               #peer chaincode list --instantiated -C commercialpaperchannel
         ;;
     "query")
-            echo -n "query a="
-            peer chaincode query -C $CC_CHANNEL_ID -n $CC_NAME  -c '{"Args":["query","a"]}'
-            echo -n "query b="
-            peer chaincode query -C $CC_CHANNEL_ID -n $CC_NAME  -c '{"Args":["query","b"]}'
+            echo "Invoke issue transcation  from Magnetocorp"
+            peer chaincode invoke -C $CC_CHANNEL_ID -n $CC_NAME  -c '{"Args":["issue","Magnetocorp","001","05-04-2019","05-09-2019","5M"]}'
+            echo "Invoke issue transcation  from Magnetocorp"
+            peer chaincode invoke -C $CC_CHANNEL_ID -n $CC_NAME  -c '{"Args":["issue","Magnetocorp","002","06-04-2019","10-10-2019","7M"]}'
+            
+
+            echo -n "Paper 001="
+            peer chaincode query -C $CC_CHANNEL_ID -n $CC_NAME  -c '{"Args":["PaperList.getPaper","001"]}'
+            echo -n "Paper 002="
+            peer chaincode query -C $CC_CHANNEL_ID -n $CC_NAME  -c '{"Args":["PaperList.getPaper","002"]}'
         ;;
     
     "invoke")
-            echo "Invoke sending 5 token from a=>b"
-            peer chaincode invoke -C $CC_CHANNEL_ID -n $CC_NAME  -c '{"Args":["invoke","a","b","5"]}'
+            echo "Invoke buy transcation  from Magnetocorp=>Digibank"
+            peer chaincode invoke -C $CC_CHANNEL_ID -n $CC_NAME  -c '{"Args":["buy","Magnetocorp","001","Magnetocorp","Digibank", "4.5 Million", "07-05-2019"]}'
+
+            echo "Invoke redeem transcation  from Magnetocorp"
+            peer chaincode invoke -C $CC_CHANNEL_ID -n $CC_NAME  -c '{"Args":["redeem","Magnetocorp","002","Papernet","12-08-2019"]}'
         ;;
     "clear")
             echo "Cleaning up Chaincode Docker images"
