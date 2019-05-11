@@ -8,7 +8,7 @@ export FABRIC_LOGGING_SPEC=info
 
 export CORE_PEER_LOCALMSPID=<<CHANGE THIS>>
 
-export CORE_PEER_ID=acme-peer1
+export CORE_PEER_ID=digibank-peer1
 
 # Admin identity used for commands
 export CORE_PEER_MSPCONFIGPATH=./fabric-ca/client/acme/admin/msp

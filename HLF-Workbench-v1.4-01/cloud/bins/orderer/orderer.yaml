@@ -12,7 +12,7 @@ General:
     # Genesis Block Method = file then GenesisFile need to be specified 
     # The genesis block file need to be generated using the configtxgen tool
     GenesisMethod: file
-    GenesisFile: ./airline-genesis.block
+    GenesisFile: ./commercialpaper-genesis.block
 
 
     # Ledger Type can be ram, json or file
@@ -32,10 +32,10 @@ General:
     # Directory for the private crypto material needed by the
     # orderer. 
     # LocalMSPDir: ./crypto-config/ordererOrganizations/acme.com/orderers/orderer.acme.com/msp
-    LocalMSPDir: ./fabric-ca/client/orderer/orderer/msp
+    LocalMSPDir: ./fabric-ca/client/papernet/orderer/msp
 
     # Identity to register the local MSP material with the MSP
-    LocalMSPID: OrdererMSP
+    LocalMSPID: PapernetMSP
 
     # Listen address: The IP on which to bind to listen.
     ListenAddress: 0.0.0.0

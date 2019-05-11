@@ -342,9 +342,8 @@ peer:
                 KeyStore:
 
     # Path on the file system where peer will find MSP local configurations
-    #mspConfigPath: ./msps/admin
-    mspConfigPath: ./../fabric-ca/client/digibank/admin/msp
-
+    mspConfigPath: ./msps/admin
+    
     # Identifier of the local MSP
     # ----!!!!IMPORTANT!!!-!!!IMPORTANT!!!-!!!IMPORTANT!!!!----
     # Deployers need to change the value of the localMspId string.
@@ -352,8 +351,8 @@ peer:
     # to match the name of one of the MSPs in each of the channel
     # that this peer is a member of. Otherwise this peer's messages
     # will not be identified as valid by other nodes.
-    #localMspId: MSP
-    localMspId: DigibankMSP
+    localMspId: MSP
+ 
 
     # CLI common client config options
     client:

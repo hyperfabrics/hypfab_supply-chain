@@ -1,0 +1,152 @@
+[34m2019-05-11 10:39:25.613 EDT [localconfig] completeInitialization -> INFO 001[0m General.Authentication.TimeWindow unset, setting to 15m0s
+[34m2019-05-11 10:39:25.613 EDT [localconfig] completeInitialization -> INFO 002[0m Kafka.Retry.ShortInterval unset, setting to 1m0s
+[34m2019-05-11 10:39:25.613 EDT [localconfig] completeInitialization -> INFO 003[0m Kafka.Retry.ShortTotal unset, setting to 10m0s
+[34m2019-05-11 10:39:25.613 EDT [localconfig] completeInitialization -> INFO 004[0m Kafka.Retry.LongInterval unset, setting to 10m0s
+[34m2019-05-11 10:39:25.613 EDT [localconfig] completeInitialization -> INFO 005[0m Kafka.Retry.LongTotal unset, setting to 12h0m0s
+[34m2019-05-11 10:39:25.613 EDT [localconfig] completeInitialization -> INFO 006[0m Kafka.Retry.NetworkTimeouts.DialTimeout unset, setting to 30s
+[34m2019-05-11 10:39:25.613 EDT [localconfig] completeInitialization -> INFO 007[0m Kafka.Retry.NetworkTimeouts.ReadTimeout unset, setting to 30s
+[34m2019-05-11 10:39:25.613 EDT [localconfig] completeInitialization -> INFO 008[0m Kafka.Retry.NetworkTimeouts.WriteTimeout unset, setting to 30s
+[34m2019-05-11 10:39:25.613 EDT [localconfig] completeInitialization -> INFO 009[0m Kafka.Retry.Metadata.RetryBackoff unset, setting to 250ms
+[34m2019-05-11 10:39:25.613 EDT [localconfig] completeInitialization -> INFO 00a[0m Kafka.Retry.Metadata.RetryMax unset, setting to 3
+[34m2019-05-11 10:39:25.613 EDT [localconfig] completeInitialization -> INFO 00b[0m Kafka.Retry.Producer.RetryBackoff unset, setting to 100ms
+[34m2019-05-11 10:39:25.613 EDT [localconfig] completeInitialization -> INFO 00c[0m Kafka.Retry.Producer.RetryMax unset, setting to 3
+[34m2019-05-11 10:39:25.613 EDT [localconfig] completeInitialization -> INFO 00d[0m Kafka.Retry.Consumer.RetryBackoff unset, setting to 2s
+[34m2019-05-11 10:39:25.613 EDT [localconfig] completeInitialization -> INFO 00e[0m Kafka.Version unset, setting to 0.10.2.0
+[34m2019-05-11 10:39:25.628 EDT [orderer.common.server] prettyPrintStruct -> INFO 00f[0m Orderer config values:
+	General.LedgerType = "file"
+	General.ListenAddress = "0.0.0.0"
+	General.ListenPort = 7050
+	General.TLS.Enabled = false
+	General.TLS.PrivateKey = "/home/pratik/HLF-Workbench-v1.4-01/orderer/server.key"
+	General.TLS.Certificate = "/home/pratik/HLF-Workbench-v1.4-01/orderer/server.crt"
+	General.TLS.RootCAs = [/home/pratik/HLF-Workbench-v1.4-01/orderer/ca.crt]
+	General.TLS.ClientAuthRequired = false
+	General.TLS.ClientRootCAs = []
+	General.Cluster.ListenAddress = ""
+	General.Cluster.ListenPort = 0
+	General.Cluster.ServerCertificate = ""
+	General.Cluster.ServerPrivateKey = ""
+	General.Cluster.ClientCertificate = ""
+	General.Cluster.ClientPrivateKey = ""
+	General.Cluster.RootCAs = []
+	General.Cluster.DialTimeout = 5s
+	General.Cluster.RPCTimeout = 7s
+	General.Cluster.ReplicationBufferSize = 20971520
+	General.Cluster.ReplicationPullTimeout = 5s
+	General.Cluster.ReplicationRetryTimeout = 5s
+	General.Cluster.ReplicationBackgroundRefreshInterval = 5m0s
+	General.Cluster.ReplicationMaxRetries = 12
+	General.Cluster.SendBufferSize = 10
+	General.Cluster.CertExpirationWarningThreshold = 168h0m0s
+	General.Keepalive.ServerMinInterval = 1m0s
+	General.Keepalive.ServerInterval = 2h0m0s
+	General.Keepalive.ServerTimeout = 20s
+	General.GenesisMethod = "file"
+	General.GenesisProfile = "SampleSingleMSPSolo"
+	General.SystemChannel = "test-system-channel-name"
+	General.GenesisFile = "/home/pratik/HLF-Workbench-v1.4-01/artefacts/commercialpaper-genesis.block"
+	General.Profile.Enabled = false
+	General.Profile.Address = ""
+	General.LocalMSPDir = "/home/pratik/HLF-Workbench-v1.4-01/fabric-ca/client/papernet/orderer/msp"
+	General.LocalMSPID = "PapernetMSP"
+	General.BCCSP.ProviderName = "SW"
+	General.BCCSP.SwOpts.SecLevel = 256
+	General.BCCSP.SwOpts.HashFamily = "SHA2"
+	General.BCCSP.SwOpts.Ephemeral = false
+	General.BCCSP.SwOpts.FileKeystore.KeyStorePath = "/home/pratik/HLF-Workbench-v1.4-01/fabric-ca/client/papernet/orderer/msp/keystore"
+	General.BCCSP.SwOpts.DummyKeystore =
+	General.BCCSP.SwOpts.InmemKeystore =
+	General.BCCSP.PluginOpts =
+	General.Authentication.TimeWindow = 15m0s
+	FileLedger.Location = "/home/pratik/HLF-Workbench-v1.4-01/orderer/bins/../ledger"
+	FileLedger.Prefix = "hyperledger-fabric-ordererledger"
+	RAMLedger.HistorySize = 0
+	Kafka.Retry.ShortInterval = 1m0s
+	Kafka.Retry.ShortTotal = 10m0s
+	Kafka.Retry.LongInterval = 10m0s
+	Kafka.Retry.LongTotal = 12h0m0s
+	Kafka.Retry.NetworkTimeouts.DialTimeout = 30s
+	Kafka.Retry.NetworkTimeouts.ReadTimeout = 30s
+	Kafka.Retry.NetworkTimeouts.WriteTimeout = 30s
+	Kafka.Retry.Metadata.RetryMax = 3
+	Kafka.Retry.Metadata.RetryBackoff = 250ms
+	Kafka.Retry.Producer.RetryMax = 3
+	Kafka.Retry.Producer.RetryBackoff = 100ms
+	Kafka.Retry.Consumer.RetryBackoff = 2s
+	Kafka.Verbose = false
+	Kafka.Version = 0.10.2.0
+	Kafka.TLS.Enabled = false
+	Kafka.TLS.PrivateKey = ""
+	Kafka.TLS.Certificate = ""
+	Kafka.TLS.RootCAs = []
+	Kafka.TLS.ClientAuthRequired = false
+	Kafka.TLS.ClientRootCAs = []
+	Kafka.SASLPlain.Enabled = false
+	Kafka.SASLPlain.User = ""
+	Kafka.SASLPlain.Password = ""
+	Kafka.Topic.ReplicationFactor = 0
+	Debug.BroadcastTraceDir = "./trace"
+	Debug.DeliverTraceDir = "./trace"
+	Consensus = <nil>
+	Operations.ListenAddress = ""
+	Operations.TLS.Enabled = false
+	Operations.TLS.PrivateKey = ""
+	Operations.TLS.Certificate = ""
+	Operations.TLS.RootCAs = []
+	Operations.TLS.ClientAuthRequired = false
+	Operations.TLS.ClientRootCAs = []
+	Metrics.Provider = ""
+	Metrics.Statsd.Network = ""
+	Metrics.Statsd.Address = ""
+	Metrics.Statsd.WriteInterval = 0s
+	Metrics.Statsd.Prefix = ""
+[33m2019-05-11 10:39:25.687 EDT [orderer.operations] initializeMetricsProvider -> WARN 010[0m Unknown provider type: ; metrics disabled
+[34m2019-05-11 10:39:25.687 EDT [fsblkstorage] newBlockfileMgr -> INFO 011[0m Getting block information from block storage
+[34m2019-05-11 10:39:25.713 EDT [orderer.commmon.multichannel] Initialize -> INFO 012[0m Starting system channel 'ordererchannel' with genesis block hash 4ef56e5d159f53a2f404e70e6a3e240bbedb3f64c1e4ffeb3a722e97310fba10 and orderer type solo
+[34m2019-05-11 10:39:25.713 EDT [orderer.common.server] Start -> INFO 013[0m Starting orderer:
+ Version: 1.4.1
+ Commit SHA: 87074a7
+ Go version: go1.11.5
+ OS/Arch: linux/amd64
+[34m2019-05-11 10:39:25.713 EDT [orderer.common.server] Start -> INFO 014[0m Beginning to serve requests
+[34m2019-05-11 10:39:35.667 EDT [fsblkstorage] newBlockfileMgr -> INFO 015[0m Getting block information from block storage
+[34m2019-05-11 10:39:35.669 EDT [comm.grpc.server] 1 -> INFO 016[0m streaming call completed grpc.service=orderer.AtomicBroadcast grpc.method=Broadcast grpc.peer_address=127.0.0.1:36020 grpc.code=OK grpc.call_duration=43.210942ms
+[34m2019-05-11 10:39:35.728 EDT [orderer.commmon.multichannel] newChain -> INFO 017[0m Created and starting new chain commercialpaperchannel
+[33m2019-05-11 10:39:35.737 EDT [common.deliver] Handle -> WARN 018[0m Error reading from 127.0.0.1:36018: rpc error: code = Canceled desc = context canceled
+[34m2019-05-11 10:39:35.737 EDT [comm.grpc.server] 1 -> INFO 019[0m streaming call completed grpc.service=orderer.AtomicBroadcast grpc.method=Deliver grpc.peer_address=127.0.0.1:36018 error="rpc error: code = Canceled desc = context canceled" grpc.code=Canceled grpc.call_duration=110.830023ms
+[33m2019-05-11 10:39:42.259 EDT [common.deliver] Handle -> WARN 01a[0m Error reading from 127.0.0.1:36022: rpc error: code = Canceled desc = context canceled
+[34m2019-05-11 10:39:42.259 EDT [comm.grpc.server] 1 -> INFO 01b[0m streaming call completed grpc.service=orderer.AtomicBroadcast grpc.method=Deliver grpc.peer_address=127.0.0.1:36022 error="rpc error: code = Canceled desc = context canceled" grpc.code=Canceled grpc.call_duration=6.195223ms
+[33m2019-05-11 10:39:45.681 EDT [common.deliver] Handle -> WARN 01c[0m Error reading from 127.0.0.1:36030: rpc error: code = Canceled desc = context canceled
+[34m2019-05-11 10:39:45.681 EDT [comm.grpc.server] 1 -> INFO 01d[0m streaming call completed grpc.service=orderer.AtomicBroadcast grpc.method=Deliver grpc.peer_address=127.0.0.1:36030 error="rpc error: code = Canceled desc = context canceled" grpc.code=Canceled grpc.call_duration=5.046238ms
+[33m2019-05-11 10:39:49.188 EDT [common.deliver] Handle -> WARN 01e[0m Error reading from 127.0.0.1:36040: rpc error: code = Canceled desc = context canceled
+[34m2019-05-11 10:39:49.188 EDT [comm.grpc.server] 1 -> INFO 01f[0m streaming call completed grpc.service=orderer.AtomicBroadcast grpc.method=Deliver grpc.peer_address=127.0.0.1:36040 error="rpc error: code = Canceled desc = context canceled" grpc.code=Canceled grpc.call_duration=5.227752ms
+[33m2019-05-11 10:39:52.907 EDT [common.deliver] Handle -> WARN 020[0m Error reading from 127.0.0.1:36046: rpc error: code = Canceled desc = context canceled
+[34m2019-05-11 10:39:52.907 EDT [comm.grpc.server] 1 -> INFO 021[0m streaming call completed grpc.service=orderer.AtomicBroadcast grpc.method=Deliver grpc.peer_address=127.0.0.1:36046 error="rpc error: code = Canceled desc = context canceled" grpc.code=Canceled grpc.call_duration=5.831756ms
+[33m2019-05-11 10:39:56.397 EDT [common.deliver] Handle -> WARN 022[0m Error reading from 127.0.0.1:36054: rpc error: code = Canceled desc = context canceled
+[34m2019-05-11 10:39:56.397 EDT [comm.grpc.server] 1 -> INFO 023[0m streaming call completed grpc.service=orderer.AtomicBroadcast grpc.method=Deliver grpc.peer_address=127.0.0.1:36054 error="rpc error: code = Canceled desc = context canceled" grpc.code=Canceled grpc.call_duration=3.512623ms
+[33m2019-05-11 10:50:12.578 EDT [orderer.common.broadcast] Handle -> WARN 024[0m Error reading from 127.0.0.1:36278: rpc error: code = Canceled desc = context canceled
+[34m2019-05-11 10:50:12.578 EDT [comm.grpc.server] 1 -> INFO 025[0m streaming call completed grpc.service=orderer.AtomicBroadcast grpc.method=Broadcast grpc.peer_address=127.0.0.1:36278 error="rpc error: code = Canceled desc = context canceled" grpc.code=Canceled grpc.call_duration=2.643904ms
+[33m2019-05-11 10:50:12.687 EDT [orderer.common.broadcast] Handle -> WARN 026[0m Error reading from 127.0.0.1:36284: rpc error: code = Canceled desc = context canceled
+[34m2019-05-11 10:50:12.687 EDT [comm.grpc.server] 1 -> INFO 027[0m streaming call completed grpc.service=orderer.AtomicBroadcast grpc.method=Broadcast grpc.peer_address=127.0.0.1:36284 error="rpc error: code = Canceled desc = context canceled" grpc.code=Canceled grpc.call_duration=1.304837ms
+[33m2019-05-11 10:50:12.787 EDT [orderer.common.broadcast] Handle -> WARN 028[0m Error reading from 127.0.0.1:36290: rpc error: code = Canceled desc = context canceled
+[34m2019-05-11 10:50:12.787 EDT [comm.grpc.server] 1 -> INFO 029[0m streaming call completed grpc.service=orderer.AtomicBroadcast grpc.method=Broadcast grpc.peer_address=127.0.0.1:36290 error="rpc error: code = Canceled desc = context canceled" grpc.code=Canceled grpc.call_duration=1.531125ms
+[33m2019-05-11 10:50:12.890 EDT [orderer.common.broadcast] Handle -> WARN 02a[0m Error reading from 127.0.0.1:36296: rpc error: code = Canceled desc = context canceled
+[34m2019-05-11 10:50:12.890 EDT [comm.grpc.server] 1 -> INFO 02b[0m streaming call completed grpc.service=orderer.AtomicBroadcast grpc.method=Broadcast grpc.peer_address=127.0.0.1:36296 error="rpc error: code = Canceled desc = context canceled" grpc.code=Canceled grpc.call_duration=1.3489ms
+[33m2019-05-11 10:51:58.366 EDT [orderer.common.broadcast] Handle -> WARN 02c[0m Error reading from 127.0.0.1:36312: rpc error: code = Canceled desc = context canceled
+[34m2019-05-11 10:51:58.366 EDT [comm.grpc.server] 1 -> INFO 02d[0m streaming call completed grpc.service=orderer.AtomicBroadcast grpc.method=Broadcast grpc.peer_address=127.0.0.1:36312 error="rpc error: code = Canceled desc = context canceled" grpc.code=Canceled grpc.call_duration=1m7.487193241s
+[33m2019-05-11 10:52:24.225 EDT [orderer.common.broadcast] Handle -> WARN 02e[0m Error reading from 127.0.0.1:36416: rpc error: code = Canceled desc = context canceled
+[34m2019-05-11 10:52:24.225 EDT [comm.grpc.server] 1 -> INFO 02f[0m streaming call completed grpc.service=orderer.AtomicBroadcast grpc.method=Broadcast grpc.peer_address=127.0.0.1:36416 error="rpc error: code = Canceled desc = context canceled" grpc.code=Canceled grpc.call_duration=49.483882ms
+[33m2019-05-11 10:52:24.345 EDT [orderer.common.broadcast] Handle -> WARN 030[0m Error reading from 127.0.0.1:36422: rpc error: code = Canceled desc = context canceled
+[34m2019-05-11 10:52:24.345 EDT [comm.grpc.server] 1 -> INFO 031[0m streaming call completed grpc.service=orderer.AtomicBroadcast grpc.method=Broadcast grpc.peer_address=127.0.0.1:36422 error="rpc error: code = Canceled desc = context canceled" grpc.code=Canceled grpc.call_duration=12.964378ms
+[33m2019-05-11 10:52:24.464 EDT [orderer.common.broadcast] Handle -> WARN 032[0m Error reading from 127.0.0.1:36428: rpc error: code = Canceled desc = context canceled
+[34m2019-05-11 10:52:24.464 EDT [comm.grpc.server] 1 -> INFO 033[0m streaming call completed grpc.service=orderer.AtomicBroadcast grpc.method=Broadcast grpc.peer_address=127.0.0.1:36428 error="rpc error: code = Canceled desc = context canceled" grpc.code=Canceled grpc.call_duration=13.421653ms
+[33m2019-05-11 10:52:24.601 EDT [orderer.common.broadcast] Handle -> WARN 034[0m Error reading from 127.0.0.1:36434: rpc error: code = Canceled desc = context canceled
+[34m2019-05-11 10:52:24.601 EDT [comm.grpc.server] 1 -> INFO 035[0m streaming call completed grpc.service=orderer.AtomicBroadcast grpc.method=Broadcast grpc.peer_address=127.0.0.1:36434 error="rpc error: code = Canceled desc = context canceled" grpc.code=Canceled grpc.call_duration=38.295436ms
+[33m2019-05-11 10:56:19.306 EDT [orderer.common.broadcast] Handle -> WARN 036[0m Error reading from 127.0.0.1:36492: rpc error: code = Canceled desc = context canceled
+[34m2019-05-11 10:56:19.306 EDT [comm.grpc.server] 1 -> INFO 037[0m streaming call completed grpc.service=orderer.AtomicBroadcast grpc.method=Broadcast grpc.peer_address=127.0.0.1:36492 error="rpc error: code = Canceled desc = context canceled" grpc.code=Canceled grpc.call_duration=7.323573751s
+[33m2019-05-11 10:56:19.436 EDT [orderer.common.broadcast] Handle -> WARN 038[0m Error reading from 127.0.0.1:36500: rpc error: code = Canceled desc = context canceled
+[34m2019-05-11 10:56:19.436 EDT [comm.grpc.server] 1 -> INFO 039[0m streaming call completed grpc.service=orderer.AtomicBroadcast grpc.method=Broadcast grpc.peer_address=127.0.0.1:36500 error="rpc error: code = Canceled desc = context canceled" grpc.code=Canceled grpc.call_duration=12.8925ms
+[33m2019-05-11 10:56:19.553 EDT [orderer.common.broadcast] Handle -> WARN 03a[0m Error reading from 127.0.0.1:36506: rpc error: code = Canceled desc = context canceled
+[34m2019-05-11 10:56:19.553 EDT [comm.grpc.server] 1 -> INFO 03b[0m streaming call completed grpc.service=orderer.AtomicBroadcast grpc.method=Broadcast grpc.peer_address=127.0.0.1:36506 error="rpc error: code = Canceled desc = context canceled" grpc.code=Canceled grpc.call_duration=14.170498ms
+[33m2019-05-11 10:56:19.681 EDT [orderer.common.broadcast] Handle -> WARN 03c[0m Error reading from 127.0.0.1:36512: rpc error: code = Canceled desc = context canceled
+[34m2019-05-11 10:56:19.681 EDT [comm.grpc.server] 1 -> INFO 03d[0m streaming call completed grpc.service=orderer.AtomicBroadcast grpc.method=Broadcast grpc.peer_address=127.0.0.1:36512 error="rpc error: code = Canceled desc = context canceled" grpc.code=Canceled grpc.call_duration=17.688504ms
