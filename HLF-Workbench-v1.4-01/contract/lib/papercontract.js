@@ -150,6 +150,19 @@ class CommercialPaperContract extends Contract {
         await ctx.paperList.updatePaper(paper);
         return paper.toBuffer();
     }
+    /**
+     * Query commercial paper
+     *
+     * @param {Context} ctx the transaction context
+     * @param {Integer} issuer commercial paper issuer
+     * @param {String} paperNumber paper number for this issuer
+    */
+   
+    async getPaper(ctx,issuer,paperNumber){
+        let paperKey = CommercialPaper.makeKey([issuer, paperNumber]);
+        let paper = await ctx.paperList.getPaper(paperKey);
+        return paper.toBuffer;
+    }
 
 }
 
