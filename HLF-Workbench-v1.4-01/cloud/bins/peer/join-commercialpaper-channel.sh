@@ -10,4 +10,4 @@ export COMMERCIALPAPER_CHANNEL_BLOCK_0=./commercialpaperchannel_0.block
 peer channel fetch 0  -o $ORDERER_ADDRESS -c commercialpaperchannel
 
 #2 Join the channel
-peer channel join -b $AIRLINE_CHANNEL_BLOCK_0 -o $ORDERER_ADDRESS
+peer channel join -b $COMMERCIALPAPER_CHANNEL_BLOCK_0 -o $ORDERER_ADDRESS

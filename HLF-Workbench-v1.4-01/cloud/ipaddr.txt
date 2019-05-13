@@ -3,14 +3,14 @@
 ipaddr.txt
 ==========
 
-Acme Peer:
-18.204.204.201
+Papernet :
+18.223.112.178
 
-Budget Peer:
-54.87.106.2
+Digibank Peer:
+3.15.28.109
 
-Orderer:
-18.212.116.189
+Magnetocorp Peer:
+18.223.212.138
 
 Fabric-CA:
 18.208.245.251

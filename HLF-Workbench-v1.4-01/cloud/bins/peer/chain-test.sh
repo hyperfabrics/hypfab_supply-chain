@@ -52,12 +52,8 @@ export CC_PATH="../../contract"
 export CC_VERSION="1.0"
 export CC_CHANNEL_ID="commercialpaperchannel"
 
-if [ ! -z $ORDERER_ADDRESS ]; then
-    echo "Using the Orderer=$ORDERER_ADDRESS"
-else
-echo "Setting the Orderer to localhost:7050"
-    ORDERER_ADDRESS="localhost:7050"
-fi
+"Setting the Orderer to 52.200.206.97:7050"
+ORDERER_ADDRESS="52.200.206.97:7050"
 
 echo "CC Operation : $OPERATION    for   Org: $CURRENT_ORG_NAME"
 

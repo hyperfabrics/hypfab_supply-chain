@@ -8,6 +8,7 @@
 
 #1 Generate the Genesis block
 export FABRIC_CFG_PATH=$PWD
+mkdir ./artefacts
 GENESIS_FILE=./artefacts/commercialpaper-genesis.block
 CHANNEL_NAME=ordererchannel
 echo "====> Generating Genesis"

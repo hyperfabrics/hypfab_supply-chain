@@ -42,7 +42,7 @@ Organizations:
           Type: Signature
           Rule: "OR('DigibankMSP.admin')"
     AnchorPeers:
-      - Host: 52.205.251.182
+      - Host: 3.15.28.109
         Port: 7051
       # You may add additional hosts here
 
@@ -62,7 +62,7 @@ Organizations:
           Type: Signature
           Rule: "OR('MagnetocorpMSP.admin')"
     AnchorPeers:
-      - Host: 18.212.140.88
+      - Host: 18.223.212.138
         Port: 7051
       # You may add additional hosts here
 
@@ -73,7 +73,7 @@ Orderer: &OrdererDefaults
   OrdererType: solo
 
   Addresses:
-    - 52.200.206.97:7050
+    - 18.223.112.178:7050
 
     # Policies for Orderer
   Policies:
