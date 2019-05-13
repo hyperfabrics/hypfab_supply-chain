@@ -40,7 +40,7 @@ else
     
 fi 
 export FABRIC_LOGGING_SPEC=info  #debug  #info #warning
-export FABRIC_CFG_PATH=$PWD
+export FABRIC_CFG_PATH=$PWD/../
 
 
 
@@ -64,6 +64,7 @@ echo "CC Operation : $OPERATION    for   Org: $CURRENT_ORG_NAME"
 # Invoke the "peer chain code" command using the operation
 case $OPERATION in
     "install")   
+             
               peer chaincode install  -n $CC_NAME -p $CC_PATH -v $CC_VERSION -l node
 
               peer chaincode list --installed -C $CC_CHANNEL_ID

@@ -1,6 +1,0 @@
-=============== May 13, 2019 (EDT) ===============
-00:25:57.322758 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
-00:25:57.332324 db@open opening
-00:25:57.332574 version@stat F·[] S·0B[] Sc·[]
-00:25:57.340662 db@janitor F·2 G·0
-00:25:57.340697 db@open done T·8.351605ms
