@@ -88,12 +88,15 @@ case $OPERATION in
             echo "Invoke issue transcation  from Magnetocorp"
             peer chaincode invoke -C $CC_CHANNEL_ID -n $CC_NAME  -c '{"Args":["issue","Magnetocorp","002","06-04-2019","10-10-2019","7M"]}'
 
+             sleep 3
+            echo "Invoke buy transcation  from Magnetocorp=>Digibank"
+            peer chaincode invoke -C $CC_CHANNEL_ID -n $CC_NAME  -c '{"Args":["buy","Magnetocorp","001","Magnetocorp","Digibank", "100000", "27-09-2019"]}'
+
+        
             sleep 3
             echo "Invoke redeem transcation  from Magnetocorp"
-            peer chaincode invoke -C $CC_CHANNEL_ID -n $CC_NAME  -c '{"Args":["redeem","Magnetocorp","002","Papernet","12-08-2019"]}'
-            sleep 3
-            echo "Invoke buy transcation  from Magnetocorp=>Digibank"
-            peer chaincode invoke -C $CC_CHANNEL_ID -n $CC_NAME  -c '{"Args":["buy","Magnetocorp","002","Papernet","Digibank", "100000", "27-09-2019"]}'
+            peer chaincode invoke -C $CC_CHANNEL_ID -n $CC_NAME  -c '{"Args":["redeem","Magnetocorp","001","Digibank","12-08-2019"]}'
+           
 
            
         ;;
