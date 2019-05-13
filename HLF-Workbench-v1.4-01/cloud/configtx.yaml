@@ -1,5 +1,5 @@
 # configtx
-# Used for setting up the Phase-3 of Airline Nw on the cloud
+# Used for setting up the Phase-3 of CommercialPaper Nw on the cloud
 
 #   CAPABILITIES
 Capabilities:
@@ -12,55 +12,55 @@ Capabilities:
 
 # ORGANIZATIONS
 Organizations:
-  - &Orderer
-    Name: Orderer
-    ID: OrdererMSP
-    MSPDir: ../fabric-ca/client/orderer/msp
+  - &Papernet
+    Name: Papernet
+    ID: PapernetMSP
+    MSPDir: ../fabric-ca/client/papernet/msp
     Policies: &OrdererPolicies
       Readers:
           Type: Signature
-          Rule: "OR('OrdererMSP.member')"
+          Rule: "OR('PapernetMSP.member')"
       Writers:
           Type: Signature
-          Rule: "OR('OrdererMSP.member')"
+          Rule: "OR('PapernetMSP.member')"
       Admins:
           Type: Signature
-          Rule: "OR('OrdererMSP.admin')"
+          Rule: "OR('PapernetMSP.admin')"
 
-  - &Acme
-    Name: Acme
-    ID: AcmeMSP
-    MSPDir: ../fabric-ca/client/acme/msp
+  - &Digibank
+    Name: Digibank
+    ID: DigibankMSP
+    MSPDir: ../fabric-ca/client/digibank/msp
     Policies: &AcmePolicies
       Readers:
           Type: Signature
-          Rule: "OR('AcmeMSP.member')"
+          Rule: "OR('DigibankMSP.member')"
       Writers:
           Type: Signature
-          Rule: "OR('AcmeMSP.member')"
+          Rule: "OR('DigibankMSP.member')"
       Admins:
           Type: Signature
-          Rule: "OR('AcmeMSP.admin')"
+          Rule: "OR('DigibankMSP.admin')"
     AnchorPeers:
       - Host: 52.205.251.182
         Port: 7051
       # You may add additional hosts here
 
   # Added by the Administrator
-  - &Budget
-    Name: Budget
-    ID: BudgetMSP
-    MSPDir: ../fabric-ca/client/budget/msp
+  - &Magnetocorp
+    Name: Magnetocorp
+    ID: MagnetocorpMSP
+    MSPDir: ../fabric-ca/client/magnetocorp/msp
     Policies: &BudgetPolicies
       Readers:
           Type: Signature
-          Rule: "OR('BudgetMSP.member')"
+          Rule: "OR('MagnetocorpMSP.member')"
       Writers:
           Type: Signature
-          Rule: "OR('BudgetMSP.member')"
+          Rule: "OR('MagnetocorpMSP.member')"
       Admins:
           Type: Signature
-          Rule: "OR('BudgetMSP.admin')"
+          Rule: "OR('MagnetocorpMSP.admin')"
     AnchorPeers:
       - Host: 18.212.140.88
         Port: 7051
@@ -210,36 +210,36 @@ Channel: &ChannelDefaults
 #   PROFILES
 Profiles:
 
-  AirlineOrdererGenesis:
+  CommercialPaperOrdererGenesis:
       <<: *ChannelDefaults
       Orderer:
           <<: *OrdererDefaults
           Organizations:
-              - <<: *Orderer
+              - <<: *Papernet
 
 
       Application:
             <<: *ApplicationDefaults
 
             Organizations:
-                - <<: *Acme               
-                - <<: *Budget
+                - <<: *Digibank               
+                - <<: *Magnetocorp
 
       Consortiums:
 
-        AirlineConsortium:
+        CommercialPaperConsortium:
             
             Organizations:
-                  - <<: *Acme                               
-                  - <<: *Budget
+                  - <<: *Digibank                               
+                  - <<: *Magnetocorp
                   
-  AirlineChannel:
+  CommercialPaperChannel:
     <<: *ChannelDefaults
-    Consortium: AirlineConsortium
+    Consortium: CommercialPaperConsortium
         
     Application:
         <<: *ApplicationDefaults
         
         Organizations:
-            - <<: *Acme
-            - <<: *Budget
+            - <<: *Digibank
+            - <<: *Magnetocorp

@@ -1,0 +1,201 @@
+[34m2019-05-13 00:25:45.656 EDT [nodeCmd] serve -> INFO 001[0m Starting peer:
+ Version: 1.4.1
+ Commit SHA: 87074a7
+ Go version: go1.11.5
+ OS/Arch: linux/amd64
+ Chaincode:
+  Base Image Version: 0.4.15
+  Base Docker Namespace: hyperledger
+  Base Docker Label: org.hyperledger.fabric
+  Docker Namespace: hyperledger
+[33m2019-05-13 00:25:45.656 EDT [peer.operations] initializeMetricsProvider -> WARN 002[0m Unknown provider type: ; metrics disabled
+[34m2019-05-13 00:25:45.656 EDT [ledgermgmt] initialize -> INFO 003[0m Initializing ledger mgmt
+[34m2019-05-13 00:25:45.656 EDT [kvledger] NewProvider -> INFO 004[0m Initializing ledger provider
+[34m2019-05-13 00:25:46.009 EDT [kvledger] NewProvider -> INFO 005[0m ledger provider Initialized
+[34m2019-05-13 00:25:46.091 EDT [ledgermgmt] initialize -> INFO 006[0m ledger mgmt initialized
+[34m2019-05-13 00:25:46.093 EDT [peer] func1 -> INFO 007[0m Auto-detected peer address: 10.0.2.15:7051
+[34m2019-05-13 00:25:46.094 EDT [peer] func1 -> INFO 008[0m Host is 0.0.0.0 , falling back to auto-detected address: 10.0.2.15:7051
+[34m2019-05-13 00:25:46.096 EDT [peer] func1 -> INFO 009[0m Auto-detected peer address: 10.0.2.15:7051
+[34m2019-05-13 00:25:46.096 EDT [peer] func1 -> INFO 00a[0m Host is 0.0.0.0 , falling back to auto-detected address: 10.0.2.15:7051
+[34m2019-05-13 00:25:46.100 EDT [nodeCmd] computeChaincodeEndpoint -> INFO 00b[0m Entering computeChaincodeEndpoint with peerHostname: 10.0.2.15
+[34m2019-05-13 00:25:46.100 EDT [nodeCmd] computeChaincodeEndpoint -> INFO 00c[0m Exit with ccEndpoint: 10.0.2.15:7052
+[34m2019-05-13 00:25:46.102 EDT [sccapi] registerSysCC -> INFO 00d[0m system chaincode lscc(github.com/hyperledger/fabric/core/scc/lscc) registered
+[34m2019-05-13 00:25:46.102 EDT [sccapi] registerSysCC -> INFO 00e[0m system chaincode cscc(github.com/hyperledger/fabric/core/scc/cscc) registered
+[34m2019-05-13 00:25:46.102 EDT [sccapi] registerSysCC -> INFO 00f[0m system chaincode qscc(github.com/hyperledger/fabric/core/scc/qscc) registered
+[34m2019-05-13 00:25:46.102 EDT [sccapi] registerSysCC -> INFO 010[0m system chaincode (+lifecycle,github.com/hyperledger/fabric/core/chaincode/lifecycle,true) disabled
+[34m2019-05-13 00:25:46.105 EDT [gossip.service] func1 -> INFO 011[0m Initialize gossip with endpoint 10.0.2.15:7051 and bootstrap set [127.0.0.1:7051]
+[34m2019-05-13 00:25:46.110 EDT [gossip.gossip] NewGossipService -> INFO 012[0m Creating gossip service with self membership of Endpoint: 0.0.0.0:7051, InternalEndpoint: 10.0.2.15:7051, PKI-ID: 0e8b5558d921b0fed62063a327c2780a8ece666803f3d54322884ae6e5693583, Metadata: 
+[34m2019-05-13 00:25:46.111 EDT [gossip.gossip] start -> INFO 013[0m Gossip instance 10.0.2.15:7051 started
+[34m2019-05-13 00:25:46.114 EDT [sccapi] deploySysCC -> INFO 014[0m system chaincode lscc/(github.com/hyperledger/fabric/core/scc/lscc) deployed
+[34m2019-05-13 00:25:46.116 EDT [cscc] Init -> INFO 015[0m Init CSCC
+[34m2019-05-13 00:25:46.116 EDT [sccapi] deploySysCC -> INFO 016[0m system chaincode cscc/(github.com/hyperledger/fabric/core/scc/cscc) deployed
+[34m2019-05-13 00:25:46.118 EDT [qscc] Init -> INFO 017[0m Init QSCC
+[34m2019-05-13 00:25:46.118 EDT [sccapi] deploySysCC -> INFO 018[0m system chaincode qscc/(github.com/hyperledger/fabric/core/scc/qscc) deployed
+[34m2019-05-13 00:25:46.119 EDT [sccapi] deploySysCC -> INFO 019[0m system chaincode (+lifecycle,github.com/hyperledger/fabric/core/chaincode/lifecycle) disabled
+[34m2019-05-13 00:25:46.120 EDT [nodeCmd] serve -> INFO 01a[0m Deployed system chaincodes
+[34m2019-05-13 00:25:46.128 EDT [discovery] NewService -> INFO 01b[0m Created with config TLS: false, authCacheMaxSize: 1000, authCachePurgeRatio: 0.750000
+[34m2019-05-13 00:25:46.128 EDT [nodeCmd] registerDiscoveryService -> INFO 01c[0m Discovery service activated
+[34m2019-05-13 00:25:46.129 EDT [nodeCmd] serve -> INFO 01d[0m Starting peer with ID=[name:"digibank-peer1" ], network ID=[dev], address=[10.0.2.15:7051]
+[34m2019-05-13 00:25:46.129 EDT [nodeCmd] serve -> INFO 01e[0m Started peer with ID=[name:"digibank-peer1" ], network ID=[dev], address=[10.0.2.15:7051]
+[34m2019-05-13 00:25:48.993 EDT [endorser] callChaincode -> INFO 01f[0m [][609c08f2] Entry chaincode: name:"cscc" 
+[34m2019-05-13 00:25:48.994 EDT [ledgermgmt] CreateLedger -> INFO 020[0m Creating ledger [commercialpaperchannel] with genesis block
+[34m2019-05-13 00:25:49.100 EDT [fsblkstorage] newBlockfileMgr -> INFO 021[0m Getting block information from block storage
+[34m2019-05-13 00:25:49.159 EDT [kvledger] CommitWithPvtData -> INFO 022[0m [commercialpaperchannel] Committed block [0] with 1 transaction(s) in 40ms (state_validation=1ms block_commit=24ms state_commit=5ms)
+[34m2019-05-13 00:25:49.162 EDT [ledgermgmt] CreateLedger -> INFO 023[0m Created ledger [commercialpaperchannel] with genesis block
+[34m2019-05-13 00:25:49.190 EDT [gossip.gossip] JoinChan -> INFO 024[0m Joining gossip network of channel commercialpaperchannel with 2 organizations
+[34m2019-05-13 00:25:49.190 EDT [gossip.gossip] learnAnchorPeers -> INFO 025[0m No configured anchor peers of DigibankMSP for channel commercialpaperchannel to learn about
+[34m2019-05-13 00:25:49.190 EDT [gossip.gossip] learnAnchorPeers -> INFO 026[0m No configured anchor peers of MagnetocorpMSP for channel commercialpaperchannel to learn about
+[33m2019-05-13 00:25:49.216 EDT [gossip.privdata] GetReconcilerConfig -> WARN 027[0m Configuration key peer.gossip.pvtData.reconcileSleepInterval isn't set, defaulting to 1m0s
+[33m2019-05-13 00:25:49.217 EDT [gossip.privdata] GetReconcilerConfig -> WARN 028[0m Configuration key peer.gossip.pvtData.reconcileBatchSize isn't set, defaulting to 10
+[34m2019-05-13 00:25:49.219 EDT [gossip.state] NewGossipStateProvider -> INFO 029[0m Updating metadata information, current ledger sequence is at = 0, next expected block is = 1
+[34m2019-05-13 00:25:49.226 EDT [sccapi] deploySysCC -> INFO 02a[0m system chaincode lscc/commercialpaperchannel(github.com/hyperledger/fabric/core/scc/lscc) deployed
+[34m2019-05-13 00:25:49.227 EDT [cscc] Init -> INFO 02b[0m Init CSCC
+[34m2019-05-13 00:25:49.228 EDT [sccapi] deploySysCC -> INFO 02c[0m system chaincode cscc/commercialpaperchannel(github.com/hyperledger/fabric/core/scc/cscc) deployed
+[34m2019-05-13 00:25:49.229 EDT [qscc] Init -> INFO 02d[0m Init QSCC
+[34m2019-05-13 00:25:49.229 EDT [sccapi] deploySysCC -> INFO 02e[0m system chaincode qscc/commercialpaperchannel(github.com/hyperledger/fabric/core/scc/qscc) deployed
+[34m2019-05-13 00:25:49.230 EDT [sccapi] deploySysCC -> INFO 02f[0m system chaincode (+lifecycle,github.com/hyperledger/fabric/core/chaincode/lifecycle) disabled
+[34m2019-05-13 00:25:49.231 EDT [endorser] callChaincode -> INFO 030[0m [][609c08f2] Exit chaincode: name:"cscc"  (238ms)
+[34m2019-05-13 00:25:49.231 EDT [comm.grpc.server] 1 -> INFO 031[0m unary call completed grpc.service=protos.Endorser grpc.method=ProcessProposal grpc.peer_address=127.0.0.1:41172 grpc.code=OK grpc.call_duration=239.3508ms
+[34m2019-05-13 00:25:50.010 EDT [comm.grpc.server] 1 -> INFO 032[0m unary call completed grpc.service=gossip.Gossip grpc.method=Ping grpc.request_deadline=2019-05-13T00:25:52.01-04:00 grpc.peer_address=127.0.0.1:41174 grpc.code=OK grpc.call_duration=48.735µs
+[34m2019-05-13 00:25:50.017 EDT [comm.grpc.server] 1 -> INFO 033[0m streaming call completed grpc.service=gossip.Gossip grpc.method=GossipStream grpc.request_deadline=2019-05-13T00:26:00.011-04:00 grpc.peer_address=127.0.0.1:41174 error="rpc error: code = Canceled desc = context canceled" grpc.code=Canceled grpc.call_duration=5.459284ms
+[34m2019-05-13 00:25:50.022 EDT [comm.grpc.server] 1 -> INFO 034[0m unary call completed grpc.service=gossip.Gossip grpc.method=Ping grpc.request_deadline=2019-05-13T00:25:52.021-04:00 grpc.peer_address=127.0.0.1:41176 grpc.code=OK grpc.call_duration=283.781µs
+[34m2019-05-13 00:25:53.541 EDT [comm.grpc.server] 1 -> INFO 035[0m unary call completed grpc.service=gossip.Gossip grpc.method=Ping grpc.request_deadline=2019-05-13T00:25:55.54-04:00 grpc.peer_address=127.0.0.1:41182 grpc.code=OK grpc.call_duration=398.16µs
+[34m2019-05-13 00:25:53.573 EDT [comm.grpc.server] 1 -> INFO 036[0m streaming call completed grpc.service=gossip.Gossip grpc.method=GossipStream grpc.request_deadline=2019-05-13T00:26:03.547-04:00 grpc.peer_address=127.0.0.1:41182 error="rpc error: code = Canceled desc = context canceled" grpc.code=Canceled grpc.call_duration=25.218331ms
+[34m2019-05-13 00:25:53.574 EDT [comm.grpc.server] 1 -> INFO 037[0m unary call completed grpc.service=gossip.Gossip grpc.method=Ping grpc.request_deadline=2019-05-13T00:25:55.574-04:00 grpc.peer_address=127.0.0.1:41184 grpc.code=OK grpc.call_duration=55.459µs
+[34m2019-05-13 00:25:54.190 EDT [gossip.channel] reportMembershipChanges -> INFO 038[0m Membership view has changed. peers went online:  [[0.0.0.0:7051 10.0.2.15:8051]] , current view:  [[0.0.0.0:7051 10.0.2.15:8051]]
+[34m2019-05-13 00:25:56.228 EDT [gossip.election] beLeader -> INFO 039[0m 0e8b5558d921b0fed62063a327c2780a8ece666803f3d54322884ae6e5693583 : Becoming a leader
+[34m2019-05-13 00:25:56.228 EDT [gossip.service] func1 -> INFO 03a[0m Elected as a leader, starting delivery service for channel commercialpaperchannel
+[34m2019-05-13 00:25:57.463 EDT [comm.grpc.server] 1 -> INFO 03b[0m unary call completed grpc.service=gossip.Gossip grpc.method=Ping grpc.request_deadline=2019-05-13T00:25:59.463-04:00 grpc.peer_address=127.0.0.1:41196 grpc.code=OK grpc.call_duration=55.903µs
+[34m2019-05-13 00:25:57.466 EDT [comm.grpc.server] 1 -> INFO 03c[0m streaming call completed grpc.service=gossip.Gossip grpc.method=GossipStream grpc.request_deadline=2019-05-13T00:26:07.464-04:00 grpc.peer_address=127.0.0.1:41196 error="rpc error: code = Canceled desc = context canceled" grpc.code=Canceled grpc.call_duration=2.489489ms
+[34m2019-05-13 00:25:59.190 EDT [gossip.channel] reportMembershipChanges -> INFO 03d[0m Membership view has changed. peers went online:  [[0.0.0.0:7051 10.0.2.15:8061]] , current view:  [[0.0.0.0:7051 10.0.2.15:8051] [0.0.0.0:7051 10.0.2.15:8061]]
+[34m2019-05-13 00:26:01.626 EDT [comm.grpc.server] 1 -> INFO 03e[0m unary call completed grpc.service=gossip.Gossip grpc.method=Ping grpc.request_deadline=2019-05-13T00:26:03.626-04:00 grpc.peer_address=127.0.0.1:41202 grpc.code=OK grpc.call_duration=279.587µs
+[34m2019-05-13 00:26:01.639 EDT [comm.grpc.server] 1 -> INFO 03f[0m streaming call completed grpc.service=gossip.Gossip grpc.method=GossipStream grpc.request_deadline=2019-05-13T00:26:11.632-04:00 grpc.peer_address=127.0.0.1:41202 error="rpc error: code = Canceled desc = context canceled" grpc.code=Canceled grpc.call_duration=7.154574ms
+[34m2019-05-13 00:26:22.469 EDT [comm.grpc.server] 1 -> INFO 040[0m unary call completed grpc.service=gossip.Gossip grpc.method=Ping grpc.request_deadline=2019-05-13T00:26:24.469-04:00 grpc.peer_address=127.0.0.1:41216 grpc.code=OK grpc.call_duration=52.288µs
+[34m2019-05-13 00:26:22.490 EDT [comm.grpc.server] 1 -> INFO 041[0m streaming call completed grpc.service=gossip.Gossip grpc.method=GossipStream grpc.request_deadline=2019-05-13T00:26:32.471-04:00 grpc.peer_address=127.0.0.1:41216 error="rpc error: code = Canceled desc = context canceled" grpc.code=Canceled grpc.call_duration=18.290713ms
+[34m2019-05-13 00:26:26.942 EDT [comm.grpc.server] 1 -> INFO 042[0m unary call completed grpc.service=gossip.Gossip grpc.method=Ping grpc.request_deadline=2019-05-13T00:26:28.942-04:00 grpc.peer_address=127.0.0.1:41218 grpc.code=OK grpc.call_duration=68.09µs
+[34m2019-05-13 00:26:26.973 EDT [endorser] callChaincode -> INFO 043[0m [][3b197c4b] Entry chaincode: name:"lscc" 
+[34m2019-05-13 00:26:27.423 EDT [comm.grpc.server] 1 -> INFO 044[0m streaming call completed grpc.service=gossip.Gossip grpc.method=GossipStream grpc.request_deadline=2019-05-13T00:26:37.035-04:00 grpc.peer_address=127.0.0.1:41218 error="rpc error: code = Canceled desc = context canceled" grpc.code=Canceled grpc.call_duration=387.805001ms
+[34m2019-05-13 00:26:30.190 EDT [lscc] executeInstall -> INFO 045[0m Installed Chaincode [commercialpaper] Version [1.0] to peer
+[34m2019-05-13 00:26:30.190 EDT [endorser] callChaincode -> INFO 046[0m [][3b197c4b] Exit chaincode: name:"lscc"  (3217ms)
+[34m2019-05-13 00:26:30.190 EDT [comm.grpc.server] 1 -> INFO 047[0m unary call completed grpc.service=protos.Endorser grpc.method=ProcessProposal grpc.peer_address=127.0.0.1:41212 grpc.code=OK grpc.call_duration=3.582027631s
+[34m2019-05-13 00:26:30.473 EDT [endorser] callChaincode -> INFO 048[0m [][46c2718d] Entry chaincode: name:"lscc" 
+[34m2019-05-13 00:26:30.781 EDT [endorser] callChaincode -> INFO 049[0m [][46c2718d] Exit chaincode: name:"lscc"  (308ms)
+[34m2019-05-13 00:26:30.781 EDT [comm.grpc.server] 1 -> INFO 04a[0m unary call completed grpc.service=protos.Endorser grpc.method=ProcessProposal grpc.peer_address=127.0.0.1:41220 grpc.code=OK grpc.call_duration=308.857489ms
+[34m2019-05-13 00:26:44.232 EDT [endorser] callChaincode -> INFO 04b[0m [commercialpaperchannel][ba87750c] Entry chaincode: name:"lscc" 
+[34m2019-05-13 00:26:47.498 EDT [comm.grpc.server] 1 -> INFO 04c[0m unary call completed grpc.service=gossip.Gossip grpc.method=Ping grpc.request_deadline=2019-05-13T00:26:49.497-04:00 grpc.peer_address=127.0.0.1:41230 grpc.code=OK grpc.call_duration=57.435µs
+[34m2019-05-13 00:26:47.500 EDT [comm.grpc.server] 1 -> INFO 04d[0m streaming call completed grpc.service=gossip.Gossip grpc.method=GossipStream grpc.request_deadline=2019-05-13T00:26:57.498-04:00 grpc.peer_address=127.0.0.1:41230 error="rpc error: code = Canceled desc = context canceled" grpc.code=Canceled grpc.call_duration=2.082546ms
+[34m2019-05-13 00:26:51.053 EDT [endorser] callChaincode -> INFO 04e[0m [commercialpaperchannel][ba87750c] Exit chaincode: name:"lscc"  (6820ms)
+[34m2019-05-13 00:26:51.053 EDT [comm.grpc.server] 1 -> INFO 04f[0m unary call completed grpc.service=protos.Endorser grpc.method=ProcessProposal grpc.peer_address=127.0.0.1:41224 grpc.code=OK grpc.call_duration=6.821894957s
+[34m2019-05-13 00:26:52.108 EDT [comm.grpc.server] 1 -> INFO 050[0m unary call completed grpc.service=gossip.Gossip grpc.method=Ping grpc.request_deadline=2019-05-13T00:26:54.107-04:00 grpc.peer_address=127.0.0.1:41236 grpc.code=OK grpc.call_duration=62.921µs
+[34m2019-05-13 00:26:52.111 EDT [comm.grpc.server] 1 -> INFO 051[0m streaming call completed grpc.service=gossip.Gossip grpc.method=GossipStream grpc.request_deadline=2019-05-13T00:27:02.108-04:00 grpc.peer_address=127.0.0.1:41236 error="rpc error: code = Canceled desc = context canceled" grpc.code=Canceled grpc.call_duration=2.425924ms
+[34m2019-05-13 00:26:53.091 EDT [gossip.privdata] StoreBlock -> INFO 052[0m [commercialpaperchannel] Received block [1] from buffer
+[34m2019-05-13 00:26:53.096 EDT [committer.txvalidator] Validate -> INFO 053[0m [commercialpaperchannel] Validated block [1] in 4ms
+[34m2019-05-13 00:26:53.096 EDT [cceventmgmt] HandleStateUpdates -> INFO 054[0m Channel [commercialpaperchannel]: Handling deploy or update of chaincode [commercialpaper]
+[34m2019-05-13 00:26:56.302 EDT [kvledger] CommitWithPvtData -> INFO 055[0m [commercialpaperchannel] Committed block [1] with 1 transaction(s) in 3205ms (state_validation=3038ms block_commit=147ms state_commit=8ms)
+[34m2019-05-13 00:26:59.366 EDT [endorser] callChaincode -> INFO 056[0m [][39bd852e] Entry chaincode: name:"cscc" 
+[34m2019-05-13 00:26:59.367 EDT [endorser] callChaincode -> INFO 057[0m [][39bd852e] Exit chaincode: name:"cscc"  (1ms)
+[34m2019-05-13 00:26:59.367 EDT [comm.grpc.server] 1 -> INFO 058[0m unary call completed grpc.service=protos.Endorser grpc.method=ProcessProposal grpc.peer_address=127.0.0.1:41240 grpc.code=OK grpc.call_duration=1.650949ms
+[34m2019-05-13 00:26:59.830 EDT [endorser] callChaincode -> INFO 059[0m [commercialpaperchannel][7f6dc771] Entry chaincode: name:"commercialpaper" 
+[34m2019-05-13 00:26:59.860 EDT [endorser] callChaincode -> INFO 05a[0m [commercialpaperchannel][7f6dc771] Exit chaincode: name:"commercialpaper"  (30ms)
+[31m2019-05-13 00:26:59.861 EDT [endorser] SimulateProposal -> ERRO 05b[0m [commercialpaperchannel][7f6dc771] failed to invoke chaincode name:"commercialpaper" , error: transaction returned with failure: Error: You've asked to invoke a function that does not exist: query
+github.com/hyperledger/fabric/core/chaincode.processChaincodeExecutionResult
+	/w/workspace/fabric-release-jobs-x86_64/gopath/src/github.com/hyperledger/fabric/core/chaincode/chaincode_support.go:266
+github.com/hyperledger/fabric/core/chaincode.(*ChaincodeSupport).Execute
+	/w/workspace/fabric-release-jobs-x86_64/gopath/src/github.com/hyperledger/fabric/core/chaincode/chaincode_support.go:240
+github.com/hyperledger/fabric/core/endorser.(*SupportImpl).Execute
+	/w/workspace/fabric-release-jobs-x86_64/gopath/src/github.com/hyperledger/fabric/core/endorser/support.go:147
+github.com/hyperledger/fabric/core/endorser.(*Endorser).callChaincode
+	/w/workspace/fabric-release-jobs-x86_64/gopath/src/github.com/hyperledger/fabric/core/endorser/endorser.go:146
+github.com/hyperledger/fabric/core/endorser.(*Endorser).SimulateProposal
+	/w/workspace/fabric-release-jobs-x86_64/gopath/src/github.com/hyperledger/fabric/core/endorser/endorser.go:247
+github.com/hyperledger/fabric/core/endorser.(*Endorser).ProcessProposal
+	/w/workspace/fabric-release-jobs-x86_64/gopath/src/github.com/hyperledger/fabric/core/endorser/endorser.go:500
+github.com/hyperledger/fabric/core/handlers/auth/filter.(*expirationCheckFilter).ProcessProposal
+	/w/workspace/fabric-release-jobs-x86_64/gopath/src/github.com/hyperledger/fabric/core/handlers/auth/filter/expiration.go:61
+github.com/hyperledger/fabric/core/handlers/auth/filter.(*filter).ProcessProposal
+	/w/workspace/fabric-release-jobs-x86_64/gopath/src/github.com/hyperledger/fabric/core/handlers/auth/filter/filter.go:32
+github.com/hyperledger/fabric/protos/peer._Endorser_ProcessProposal_Handler.func1
+	/w/workspace/fabric-release-jobs-x86_64/gopath/src/github.com/hyperledger/fabric/protos/peer/peer.pb.go:169
+github.com/hyperledger/fabric/vendor/github.com/grpc-ecosystem/go-grpc-middleware.ChainUnaryServer.func1.1
+	/w/workspace/fabric-release-jobs-x86_64/gopath/src/github.com/hyperledger/fabric/vendor/github.com/grpc-ecosystem/go-grpc-middleware/chain.go:31
+github.com/hyperledger/fabric/core/comm.(*Throttle).UnaryServerIntercptor
+	/w/workspace/fabric-release-jobs-x86_64/gopath/src/github.com/hyperledger/fabric/core/comm/throttle.go:54
+github.com/hyperledger/fabric/core/comm.(*Throttle).UnaryServerIntercptor-fm
+	/w/workspace/fabric-release-jobs-x86_64/gopath/src/github.com/hyperledger/fabric/peer/node/start.go:224
+github.com/hyperledger/fabric/vendor/github.com/grpc-ecosystem/go-grpc-middleware.ChainUnaryServer.func1.1
+	/w/workspace/fabric-release-jobs-x86_64/gopath/src/github.com/hyperledger/fabric/vendor/github.com/grpc-ecosystem/go-grpc-middleware/chain.go:34
+github.com/hyperledger/fabric/common/grpclogging.UnaryServerInterceptor.func1
+	/w/workspace/fabric-release-jobs-x86_64/gopath/src/github.com/hyperledger/fabric/common/grpclogging/server.go:91
+github.com/hyperledger/fabric/vendor/github.com/grpc-ecosystem/go-grpc-middleware.ChainUnaryServer.func1.1
+	/w/workspace/fabric-release-jobs-x86_64/gopath/src/github.com/hyperledger/fabric/vendor/github.com/grpc-ecosystem/go-grpc-middleware/chain.go:34
+github.com/hyperledger/fabric/common/grpcmetrics.UnaryServerInterceptor.func1
+	/w/workspace/fabric-release-jobs-x86_64/gopath/src/github.com/hyperledger/fabric/common/grpcmetrics/interceptor.go:30
+github.com/hyperledger/fabric/vendor/github.com/grpc-ecosystem/go-grpc-middleware.ChainUnaryServer.func1
+	/w/workspace/fabric-release-jobs-x86_64/gopath/src/github.com/hyperledger/fabric/vendor/github.com/grpc-ecosystem/go-grpc-middleware/chain.go:39
+github.com/hyperledger/fabric/protos/peer._Endorser_ProcessProposal_Handler
+	/w/workspace/fabric-release-jobs-x86_64/gopath/src/github.com/hyperledger/fabric/protos/peer/peer.pb.go:171
+github.com/hyperledger/fabric/vendor/google.golang.org/grpc.(*Server).processUnaryRPC
+	/w/workspace/fabric-release-jobs-x86_64/gopath/src/github.com/hyperledger/fabric/vendor/google.golang.org/grpc/server.go:982
+github.com/hyperledger/fabric/vendor/google.golang.org/grpc.(*Server).handleStream
+	/w/workspace/fabric-release-jobs-x86_64/gopath/src/github.com/hyperledger/fabric/vendor/google.golang.org/grpc/server.go:1208
+github.com/hyperledger/fabric/vendor/google.golang.org/grpc.(*Server).serveStreams.func1.1
+	/w/workspace/fabric-release-jobs-x86_64/gopath/src/github.com/hyperledger/fabric/vendor/google.golang.org/grpc/server.go:686
+runtime.goexit
+	/opt/go/go1.11.5.linux.amd64/src/runtime/asm_amd64.s:1333
+[34m2019-05-13 00:26:59.862 EDT [comm.grpc.server] 1 -> INFO 05c[0m unary call completed grpc.service=protos.Endorser grpc.method=ProcessProposal grpc.peer_address=127.0.0.1:41240 grpc.code=OK grpc.call_duration=453.466753ms
+[34m2019-05-13 00:27:03.111 EDT [endorser] callChaincode -> INFO 05d[0m [commercialpaperchannel][6d72b6ad] Entry chaincode: name:"commercialpaper" 
+[34m2019-05-13 00:27:03.134 EDT [endorser] callChaincode -> INFO 05e[0m [commercialpaperchannel][6d72b6ad] Exit chaincode: name:"commercialpaper"  (23ms)
+[31m2019-05-13 00:27:03.135 EDT [endorser] SimulateProposal -> ERRO 05f[0m [commercialpaperchannel][6d72b6ad] failed to invoke chaincode name:"commercialpaper" , error: transaction returned with failure: Error: You've asked to invoke a function that does not exist: query
+github.com/hyperledger/fabric/core/chaincode.processChaincodeExecutionResult
+	/w/workspace/fabric-release-jobs-x86_64/gopath/src/github.com/hyperledger/fabric/core/chaincode/chaincode_support.go:266
+github.com/hyperledger/fabric/core/chaincode.(*ChaincodeSupport).Execute
+	/w/workspace/fabric-release-jobs-x86_64/gopath/src/github.com/hyperledger/fabric/core/chaincode/chaincode_support.go:240
+github.com/hyperledger/fabric/core/endorser.(*SupportImpl).Execute
+	/w/workspace/fabric-release-jobs-x86_64/gopath/src/github.com/hyperledger/fabric/core/endorser/support.go:147
+github.com/hyperledger/fabric/core/endorser.(*Endorser).callChaincode
+	/w/workspace/fabric-release-jobs-x86_64/gopath/src/github.com/hyperledger/fabric/core/endorser/endorser.go:146
+github.com/hyperledger/fabric/core/endorser.(*Endorser).SimulateProposal
+	/w/workspace/fabric-release-jobs-x86_64/gopath/src/github.com/hyperledger/fabric/core/endorser/endorser.go:247
+github.com/hyperledger/fabric/core/endorser.(*Endorser).ProcessProposal
+	/w/workspace/fabric-release-jobs-x86_64/gopath/src/github.com/hyperledger/fabric/core/endorser/endorser.go:500
+github.com/hyperledger/fabric/core/handlers/auth/filter.(*expirationCheckFilter).ProcessProposal
+	/w/workspace/fabric-release-jobs-x86_64/gopath/src/github.com/hyperledger/fabric/core/handlers/auth/filter/expiration.go:61
+github.com/hyperledger/fabric/core/handlers/auth/filter.(*filter).ProcessProposal
+	/w/workspace/fabric-release-jobs-x86_64/gopath/src/github.com/hyperledger/fabric/core/handlers/auth/filter/filter.go:32
+github.com/hyperledger/fabric/protos/peer._Endorser_ProcessProposal_Handler.func1
+	/w/workspace/fabric-release-jobs-x86_64/gopath/src/github.com/hyperledger/fabric/protos/peer/peer.pb.go:169
+github.com/hyperledger/fabric/vendor/github.com/grpc-ecosystem/go-grpc-middleware.ChainUnaryServer.func1.1
+	/w/workspace/fabric-release-jobs-x86_64/gopath/src/github.com/hyperledger/fabric/vendor/github.com/grpc-ecosystem/go-grpc-middleware/chain.go:31
+github.com/hyperledger/fabric/core/comm.(*Throttle).UnaryServerIntercptor
+	/w/workspace/fabric-release-jobs-x86_64/gopath/src/github.com/hyperledger/fabric/core/comm/throttle.go:54
+github.com/hyperledger/fabric/core/comm.(*Throttle).UnaryServerIntercptor-fm
+	/w/workspace/fabric-release-jobs-x86_64/gopath/src/github.com/hyperledger/fabric/peer/node/start.go:224
+github.com/hyperledger/fabric/vendor/github.com/grpc-ecosystem/go-grpc-middleware.ChainUnaryServer.func1.1
+	/w/workspace/fabric-release-jobs-x86_64/gopath/src/github.com/hyperledger/fabric/vendor/github.com/grpc-ecosystem/go-grpc-middleware/chain.go:34
+github.com/hyperledger/fabric/common/grpclogging.UnaryServerInterceptor.func1
+	/w/workspace/fabric-release-jobs-x86_64/gopath/src/github.com/hyperledger/fabric/common/grpclogging/server.go:91
+github.com/hyperledger/fabric/vendor/github.com/grpc-ecosystem/go-grpc-middleware.ChainUnaryServer.func1.1
+	/w/workspace/fabric-release-jobs-x86_64/gopath/src/github.com/hyperledger/fabric/vendor/github.com/grpc-ecosystem/go-grpc-middleware/chain.go:34
+github.com/hyperledger/fabric/common/grpcmetrics.UnaryServerInterceptor.func1
+	/w/workspace/fabric-release-jobs-x86_64/gopath/src/github.com/hyperledger/fabric/common/grpcmetrics/interceptor.go:30
+github.com/hyperledger/fabric/vendor/github.com/grpc-ecosystem/go-grpc-middleware.ChainUnaryServer.func1
+	/w/workspace/fabric-release-jobs-x86_64/gopath/src/github.com/hyperledger/fabric/vendor/github.com/grpc-ecosystem/go-grpc-middleware/chain.go:39
+github.com/hyperledger/fabric/protos/peer._Endorser_ProcessProposal_Handler
+	/w/workspace/fabric-release-jobs-x86_64/gopath/src/github.com/hyperledger/fabric/protos/peer/peer.pb.go:171
+github.com/hyperledger/fabric/vendor/google.golang.org/grpc.(*Server).processUnaryRPC
+	/w/workspace/fabric-release-jobs-x86_64/gopath/src/github.com/hyperledger/fabric/vendor/google.golang.org/grpc/server.go:982
+github.com/hyperledger/fabric/vendor/google.golang.org/grpc.(*Server).handleStream
+	/w/workspace/fabric-release-jobs-x86_64/gopath/src/github.com/hyperledger/fabric/vendor/google.golang.org/grpc/server.go:1208
+github.com/hyperledger/fabric/vendor/google.golang.org/grpc.(*Server).serveStreams.func1.1
+	/w/workspace/fabric-release-jobs-x86_64/gopath/src/github.com/hyperledger/fabric/vendor/google.golang.org/grpc/server.go:686
+runtime.goexit
+	/opt/go/go1.11.5.linux.amd64/src/runtime/asm_amd64.s:1333
+[34m2019-05-13 00:27:03.135 EDT [comm.grpc.server] 1 -> INFO 060[0m unary call completed grpc.service=protos.Endorser grpc.method=ProcessProposal grpc.peer_address=127.0.0.1:41246 grpc.code=OK grpc.call_duration=24.738632ms
+[34m2019-05-13 00:27:12.504 EDT [comm.grpc.server] 1 -> INFO 061[0m unary call completed grpc.service=gossip.Gossip grpc.method=Ping grpc.request_deadline=2019-05-13T00:27:14.504-04:00 grpc.peer_address=127.0.0.1:41250 grpc.code=OK grpc.call_duration=63.562µs
+[34m2019-05-13 00:27:12.509 EDT [comm.grpc.server] 1 -> INFO 062[0m streaming call completed grpc.service=gossip.Gossip grpc.method=GossipStream grpc.request_deadline=2019-05-13T00:27:22.505-04:00 grpc.peer_address=127.0.0.1:41250 error="rpc error: code = Canceled desc = context canceled" grpc.code=Canceled grpc.call_duration=4.13531ms
+[34m2019-05-13 00:27:17.121 EDT [comm.grpc.server] 1 -> INFO 063[0m unary call completed grpc.service=gossip.Gossip grpc.method=Ping grpc.request_deadline=2019-05-13T00:27:19.121-04:00 grpc.peer_address=127.0.0.1:41252 grpc.code=OK grpc.call_duration=78.809µs
+[34m2019-05-13 00:27:17.133 EDT [comm.grpc.server] 1 -> INFO 064[0m streaming call completed grpc.service=gossip.Gossip grpc.method=GossipStream grpc.request_deadline=2019-05-13T00:27:27.121-04:00 grpc.peer_address=127.0.0.1:41252 error="rpc error: code = Canceled desc = context canceled" grpc.code=Canceled grpc.call_duration=11.995707ms
+[34m2019-05-13 00:28:59.068 EDT [comm.grpc.server] 1 -> INFO 065[0m unary call completed grpc.service=gossip.Gossip grpc.method=Ping grpc.request_deadline=2019-05-13T00:29:01.068-04:00 grpc.peer_address=127.0.0.1:41254 grpc.code=OK grpc.call_duration=421.004µs
+[34m2019-05-13 00:28:59.088 EDT [comm.grpc.server] 1 -> INFO 066[0m streaming call completed grpc.service=gossip.Gossip grpc.method=GossipStream grpc.request_deadline=2019-05-13T00:29:09.073-04:00 grpc.peer_address=127.0.0.1:41254 error="rpc error: code = Canceled desc = context canceled" grpc.code=Canceled grpc.call_duration=15.186349ms
+[34m2019-05-13 00:29:03.695 EDT [comm.grpc.server] 1 -> INFO 067[0m unary call completed grpc.service=gossip.Gossip grpc.method=Ping grpc.request_deadline=2019-05-13T00:29:05.695-04:00 grpc.peer_address=127.0.0.1:41256 grpc.code=OK grpc.call_duration=54.433µs
+[34m2019-05-13 00:29:03.698 EDT [comm.grpc.server] 1 -> INFO 068[0m streaming call completed grpc.service=gossip.Gossip grpc.method=GossipStream grpc.request_deadline=2019-05-13T00:29:13.696-04:00 grpc.peer_address=127.0.0.1:41256 error="rpc error: code = Canceled desc = context canceled" grpc.code=Canceled grpc.call_duration=2.153553ms

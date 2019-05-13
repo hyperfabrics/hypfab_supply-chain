@@ -32,7 +32,8 @@ class CommercialPaperContract extends Contract {
 
     constructor() {
         // Unique namespace when multiple contracts per chaincode file
-        super('org.papernet.commercialpaper');
+        super('papernet.commercialpaper');
+        
     }
 
     /**
@@ -153,17 +154,18 @@ class CommercialPaperContract extends Contract {
         return paper.toBuffer();
     }
      /**
-     * Query commercial paper
+     * query commercial paper
      *
      * @param {Context} ctx the transaction context
      * @param {String} issuer commercial paper issuer
      * @param {String} paperNumber paper number for this issuer
     */
-   async getPaper(ctx,issuer, paperNumber) {
+    async query(ctx,issuer,paperNumber) {
 
     let paperKey = CommercialPaper.makeKey([issuer, paperNumber]);
 
     let paper = await ctx.paperList.getPaper(paperKey);
+    
     return paper.toBuffer();
 }
 

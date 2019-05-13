@@ -71,13 +71,14 @@ case $OPERATION in
     "instantiate")
               peer chaincode instantiate -C $CC_CHANNEL_ID -n $CC_NAME  -v $CC_VERSION -c $CC_CONSTRUCTOR  -o $ORDERER_ADDRESS
 
-              #peer chaincode list --instantiated -C commercialpaperchannel
+              #peer chaincode list --instantiated -C $CC_CHANNEL_ID
         ;;
     "query")
             echo -n "Paper 001="
-            peer chaincode query -C $CC_CHANNEL_ID -n $CC_NAME  -c '{"Args":["getPaper","Magnetocorp","001"]}'
+            peer chaincode invoke -C $CC_CHANNEL_ID -n $CC_NAME  -c '{"Args":["query","Magnetocorp","001"]}'
+            sleep 3
             echo -n "Paper 002="
-            peer chaincode query -C $CC_CHANNEL_ID -n $CC_NAME  -c '{"Args":["getPaper","Magnetocorp","002"]}'
+            peer chaincode query -C $CC_CHANNEL_ID -n $CC_NAME  -c '{"Args":["query","Magnetocorp","002"]}'
         ;;
     
     "invoke")
@@ -88,7 +89,7 @@ case $OPERATION in
             echo "Invoke issue transcation  from Magnetocorp"
             peer chaincode invoke -C $CC_CHANNEL_ID -n $CC_NAME  -c '{"Args":["issue","Magnetocorp","002","06-04-2019","10-10-2019","7M"]}'
 
-             sleep 3
+            sleep 3
             echo "Invoke buy transcation  from Magnetocorp=>Digibank"
             peer chaincode invoke -C $CC_CHANNEL_ID -n $CC_NAME  -c '{"Args":["buy","Magnetocorp","001","Magnetocorp","Digibank", "100000", "27-09-2019"]}'
 

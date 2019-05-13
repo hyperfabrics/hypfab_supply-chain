@@ -1,10 +1,12 @@
+# Copyright 2018 @ http://ACloudFan.com 
+# Part of a online course. Please check it out at http://www.acloudfan.com
+
+# Use this for testing your cloud setup *or* even local setup :)
+# Example ./cc-test.sh  install  
 function    usage {
     echo  "Usage: ./chain-test.sh    install | instantiate | invoke | query "
     echo  "Utility for testing peeer/channel setup with chaincode"
 }
-
-export FABRIC_LOGGING_SPEC=info  #debug  #info #warning
-export FABRIC_CFG_PATH=$PWD
 
 
 # Uses the core.yaml file in current folder - copy of core.yaml under cloud/bins/peer
@@ -14,6 +16,7 @@ then
     echo  "Please specify Operation!!!"
     exit 0
 else
+  
     OPERATION=$1
 fi
 
@@ -23,12 +26,23 @@ then
     echo "Please provide the ORG Name!!!"
     exit 0
 else
-    export CURRENT_ORG_NAME=$2 >> core.yaml
-    MSP_ID= "$(tr '[:lower:]' '[:upper:]' <<< ${CURRENT_ORG_NAME:0:1})${CURRENT_ORG_NAME:1}"
-    export MSP_ID="$MSP_ID MSP"
+    CURRENT_ORG_NAME=$2
 fi
 
-echo " Current Org Name : $CURRENT_ORG_NAME "
+if [ -z $3 ];
+then
+    usage
+    echo "Please provide the Port Base!!!"
+     . set-env.sh  $2 7050  admin
+    exit 0
+else
+    . set-env.sh  $2 $3  admin
+    
+fi 
+export FABRIC_LOGGING_SPEC=info  #debug  #info #warning
+export FABRIC_CFG_PATH=$PWD
+
+
 
 # Test Chaincode related properties
 # Change these if you would like to try out your own chaincode
@@ -57,13 +71,14 @@ case $OPERATION in
     "instantiate")
               peer chaincode instantiate -C $CC_CHANNEL_ID -n $CC_NAME  -v $CC_VERSION -c $CC_CONSTRUCTOR  -o $ORDERER_ADDRESS
 
-              #peer chaincode list --instantiated -C commercialpaperchannel
+              #peer chaincode list --instantiated -C $CC_CHANNEL_ID
         ;;
     "query")
             echo -n "Paper 001="
-            peer chaincode query -C $CC_CHANNEL_ID -n $CC_NAME  -c '{"Args":["PaperList.getPaper","001"]}'
+            peer chaincode invoke -C $CC_CHANNEL_ID -n $CC_NAME  -c '{"Args":["query","Magnetocorp","001"]}'
+            sleep 3
             echo -n "Paper 002="
-            peer chaincode query -C $CC_CHANNEL_ID -n $CC_NAME  -c '{"Args":["PaperList.getPaper","002"]}'
+            peer chaincode query -C $CC_CHANNEL_ID -n $CC_NAME  -c '{"Args":["query","Magnetocorp","002"]}'
         ;;
     
     "invoke")
@@ -74,11 +89,17 @@ case $OPERATION in
             echo "Invoke issue transcation  from Magnetocorp"
             peer chaincode invoke -C $CC_CHANNEL_ID -n $CC_NAME  -c '{"Args":["issue","Magnetocorp","002","06-04-2019","10-10-2019","7M"]}'
 
+            sleep 3
             echo "Invoke buy transcation  from Magnetocorp=>Digibank"
-            peer chaincode invoke -C $CC_CHANNEL_ID -n $CC_NAME  -c '{"Args":["buy","Magnetocorp","001","Magnetocorp","Digibank", "4.5 Million", "07-05-2019"]}'
+            peer chaincode invoke -C $CC_CHANNEL_ID -n $CC_NAME  -c '{"Args":["buy","Magnetocorp","001","Magnetocorp","Digibank", "100000", "27-09-2019"]}'
 
+        
+            sleep 3
             echo "Invoke redeem transcation  from Magnetocorp"
-            peer chaincode invoke -C $CC_CHANNEL_ID -n $CC_NAME  -c '{"Args":["redeem","Magnetocorp","002","Papernet","12-08-2019"]}'
+            peer chaincode invoke -C $CC_CHANNEL_ID -n $CC_NAME  -c '{"Args":["redeem","Magnetocorp","001","Digibank","12-08-2019"]}'
+           
+
+           
         ;;
     "clear")
             echo "Cleaning up Chaincode Docker images"
@@ -88,6 +109,4 @@ case $OPERATION in
         ;;
 esac
 
-#export CURRENT_ORG_NAME=""
-#export MSP_ID=""
 

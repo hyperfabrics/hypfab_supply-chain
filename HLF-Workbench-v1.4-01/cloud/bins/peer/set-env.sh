@@ -11,4 +11,4 @@ export CORE_PEER_LOCALMSPID=<<CHANGE THIS>>
 export CORE_PEER_ID=digibank-peer1
 
 # Admin identity used for commands
-export CORE_PEER_MSPCONFIGPATH=./fabric-ca/client/acme/admin/msp
+export CORE_PEER_MSPCONFIGPATH=./fabric-ca/client/digibank/admin/msp

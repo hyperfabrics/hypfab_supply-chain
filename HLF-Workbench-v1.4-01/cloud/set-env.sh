@@ -8,8 +8,8 @@
 
 
 export ORDERER_ADDRESS=52.200.206.97:7050
-export ACME_EP=52.205.251.182:7051
-export BUDGET_EP=18.212.140.88:7051
+export PAPERNET_EP=52.205.251.182:7051
+export MAGNETOCORP_EP=18.212.140.88:7051
 
 export CA_IP=54.173.103.244
 export CA_URL=http://$CA_IP:7054
@@ -28,11 +28,11 @@ echo "Setting environment for $CURRENT_ORG_NAME"
 
 # Set environment variables based on the ORG_Name
 case $CURRENT_ORG_NAME in
-    "acme")   export CORE_PEER_MSPCONFIGPATH=../fabric-ca/client/acme/admin/msp
+    "digibank")   export CORE_PEER_MSPCONFIGPATH=../fabric-ca/client/digibank/admin/msp
               export CORE_PEER_ADDRESS=$ACME_EP
               export CORE_PEER_LOCALMSPID=AcmeMSP
         ;;
-    "budget") export CORE_PEER_MSPCONFIGPATH=../fabric-ca/client/budget/admin/msp
+    "magnetocorp") export CORE_PEER_MSPCONFIGPATH=../fabric-ca/client/magnetocorp/admin/msp
               export CORE_PEER_ADDRESS=$BUDGET_EP
               export CORE_PEER_LOCALMSPID=BudgetMSP
         ;;
