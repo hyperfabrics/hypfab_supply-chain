@@ -32,7 +32,7 @@ class CommercialPaperContract extends Contract {
 
     constructor() {
         // Unique namespace when multiple contracts per chaincode file
-        super('papernet.commercialpaper');
+        super('org.papernet.commercialpaper');
     }
 
     /**
@@ -124,15 +124,17 @@ class CommercialPaperContract extends Contract {
      *
      * @param {Context} ctx the transaction context
      * @param {String} issuer commercial paper issuer
-     * @param {Integer} paperNumber paper number for this issuer
+     * @param {String} paperNumber paper number for this issuer
      * @param {String} redeemingOwner redeeming owner of paper
      * @param {String} redeemDateTime time paper was redeemed
     */
-    async redeem(ctx, issuer, paperNumber, redeemingOwner, redeemDateTime) {
+    async redeem(ctx,issuer, paperNumber, redeemingOwner, redeemDateTime) {
 
         let paperKey = CommercialPaper.makeKey([issuer, paperNumber]);
 
         let paper = await ctx.paperList.getPaper(paperKey);
+
+        
 
         // Check paper is not REDEEMED
         if (paper.isRedeemed()) {
@@ -150,19 +152,21 @@ class CommercialPaperContract extends Contract {
         await ctx.paperList.updatePaper(paper);
         return paper.toBuffer();
     }
-    /**
+     /**
      * Query commercial paper
      *
      * @param {Context} ctx the transaction context
-     * @param {Integer} issuer commercial paper issuer
+     * @param {String} issuer commercial paper issuer
      * @param {String} paperNumber paper number for this issuer
     */
-   
-    async getPaper(ctx,issuer,paperNumber){
-        let paperKey = CommercialPaper.makeKey([issuer, paperNumber]);
-        let paper = await ctx.paperList.getPaper(paperKey);
-        return paper.toBuffer;
-    }
+   async getPaper(ctx,issuer, paperNumber) {
+
+    let paperKey = CommercialPaper.makeKey([issuer, paperNumber]);
+
+    let paper = await ctx.paperList.getPaper(paperKey);
+    return paper.toBuffer();
+}
+
 
 }
 
