@@ -8,7 +8,7 @@ function    usage {
 
 source set-env.sh $1
 
-export FABRIC_CA_CLIENT_HOME=$PWD/../fabric-ca/client/$1/admin
+export FABRIC_CA_CLIENT_HOME=./fabric-ca/client/$1/admin
 
 echo "Using FABRIC_CA_CLIENT_HOME=$FABRIC_CA_CLIENT_HOME   CA_URL=$CA_URL"
 

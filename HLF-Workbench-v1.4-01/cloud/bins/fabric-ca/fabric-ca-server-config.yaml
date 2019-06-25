@@ -241,7 +241,7 @@ ldap:
 #############################################################################
 affiliations:
   digibank:
-    - lending
+    - logistics
     - accounting
     - b2b
   papernet:

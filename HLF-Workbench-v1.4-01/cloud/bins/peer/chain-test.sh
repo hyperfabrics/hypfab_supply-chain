@@ -48,12 +48,12 @@ export FABRIC_CFG_PATH=$PWD
 # Change these if you would like to try out your own chaincode
 export CC_CONSTRUCTOR='{"Args":["instantiate"]}'
 export CC_NAME="commercialpaper"
-export CC_PATH="../../contract"
+export CC_PATH="./contract"
 export CC_VERSION="1.0"
 export CC_CHANNEL_ID="commercialpaperchannel"
 
-"Setting the Orderer to 52.200.206.97:7050"
-ORDERER_ADDRESS="52.200.206.97:7050"
+"Setting the Orderer to 18.224.25.94:7050"
+ORDERER_ADDRESS="18.224.25.94:7050"
 
 echo "CC Operation : $OPERATION    for   Org: $CURRENT_ORG_NAME"
 

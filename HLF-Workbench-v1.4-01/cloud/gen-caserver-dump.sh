@@ -3,8 +3,8 @@
 
 # Creates a full dump of the local CA server setup
 MSP_TAR_FOLDER=$PWD/artefacts
-FABRIC_CA_SERVER_HOME=$PWD/../fabric-ca/server
-FABRIC_CA_CLIENT_HOME=$PWD/../fabric-ca/client
+FABRIC_CA_SERVER_HOME=./fabric-ca/server
+FABRIC_CA_CLIENT_HOME=./fabric-ca/client
 
 CASERVER_DUMP_FILE="caserver-dump.tar"
 

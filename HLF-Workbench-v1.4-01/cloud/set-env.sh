@@ -7,9 +7,9 @@
 # Use PUBLIC IP Here
 
 
-export ORDERER_ADDRESS=18.223.112.178:7050
-export DIGIBANK_EP=3.15.28.109:7051
-export MAGNETOCORP_EP=18.223.212.138:7051
+export ORDERER_ADDRESS=18.220.137.253:7050
+export DIGIBANK_EP=18.191.153.20:7051
+export MAGNETOCORP_EP=18.219.76.190:7051
 
 export CA_IP=54.173.103.244
 export CA_URL=http://$CA_IP:7054
@@ -28,11 +28,11 @@ echo "Setting environment for $CURRENT_ORG_NAME"
 
 # Set environment variables based on the ORG_Name
 case $CURRENT_ORG_NAME in
-    "digibank")   export CORE_PEER_MSPCONFIGPATH=../fabric-ca/client/digibank/admin/msp
+    "digibank")   export CORE_PEER_MSPCONFIGPATH=./fabric-ca/client/digibank/admin/msp
               export CORE_PEER_ADDRESS=$DIGIBANK_EP
               export CORE_PEER_LOCALMSPID=DigibankMSP
         ;;
-    "magnetocorp") export CORE_PEER_MSPCONFIGPATH=../fabric-ca/client/magnetocorp/admin/msp
+    "magnetocorp") export CORE_PEER_MSPCONFIGPATH=./fabric-ca/client/magnetocorp/admin/msp
               export CORE_PEER_ADDRESS=$MAGNETOCORP_EP
               export CORE_PEER_LOCALMSPID=MagnetocorpMSP
         ;;

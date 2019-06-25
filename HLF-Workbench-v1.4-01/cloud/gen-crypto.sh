@@ -21,7 +21,7 @@ else
 fi
 
 MSP_TAR_FOLDER=$PWD/artefacts
-FABRIC_CA_CLIENT_HOME=$PWD/../fabric-ca/client
+FABRIC_CA_CLIENT_HOME=./fabric-ca/client
 
 # If identity in $2 NOT provided then 
 # Generate the org tar and return
