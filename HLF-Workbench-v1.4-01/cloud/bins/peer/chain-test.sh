@@ -1,14 +1,8 @@
-# Copyright 2018 @ http://ACloudFan.com 
-# Part of a online course. Please check it out at http://www.acloudfan.com
-
-# Use this for testing your cloud setup *or* even local setup :)
-# Example ./cc-test.sh  install  
 function    usage {
     echo  "Usage: ./chain-test.sh    install | instantiate | invoke | query "
-    echo  "Utility for testing peeer/channel setup with chaincode"
+    echo  "Utility for testing peer/channel setup with chaincode"
 }
-
-
+source ./set-env.sh
 # Uses the core.yaml file in current folder - copy of core.yaml under cloud/bins/peer
 if [ -z $1 ];
 then
@@ -20,29 +14,6 @@ else
     OPERATION=$1
 fi
 
-if [ -z $2 ];
-then
-    usage
-    echo "Please provide the ORG Name!!!"
-    exit 0
-else
-    CURRENT_ORG_NAME=$2
-fi
-
-if [ -z $3 ];
-then
-    usage
-    echo "Please provide the Port Base!!!"
-     . set-env.sh  $2 7050  admin
-    exit 0
-else
-    . set-env.sh  $2 $3  admin
-    
-fi 
-export FABRIC_LOGGING_SPEC=info  #debug  #info #warning
-export FABRIC_CFG_PATH=$PWD
-
-
 
 # Test Chaincode related properties
 # Change these if you would like to try out your own chaincode
@@ -52,10 +23,7 @@ export CC_PATH="./contract"
 export CC_VERSION="1.0"
 export CC_CHANNEL_ID="commercialpaperchannel"
 
-"Setting the Orderer to 18.224.25.94:7050"
-ORDERER_ADDRESS="18.224.25.94:7050"
-
-echo "CC Operation : $OPERATION    for   Org: $CURRENT_ORG_NAME"
+echo "CC Operation : $OPERATION    for   Org: $PEER_ORG"
 
 # Invoke the "peer chain code" command using the operation
 case $OPERATION in

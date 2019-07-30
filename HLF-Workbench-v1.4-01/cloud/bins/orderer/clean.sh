@@ -8,8 +8,8 @@ rm -rf ./ledger 2> /dev/null
 rm -f ./*log 2> /dev/null
 fuser -n tcp -k 7050
 
-docker kill $(docker ps -q)
+#docker kill $(docker ps -q)
 
-docker rm $(docker ps -a -q)
+#docker rm $(docker ps -a -q)
 
 echo "Done."

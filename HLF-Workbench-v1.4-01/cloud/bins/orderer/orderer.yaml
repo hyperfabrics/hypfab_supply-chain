@@ -54,7 +54,7 @@ General:
 
     # TLS: TLS settings for the GRPC server.
     TLS:
-        Enabled: true
+        Enabled: false
         PrivateKey: ./fabric-ca/client/papernet/tls/server.key
         Certificate: ./fabric-ca/client/papernet/tls/server.crt
         RootCAs:

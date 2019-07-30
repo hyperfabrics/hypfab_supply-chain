@@ -46,13 +46,13 @@ logging:
     # Note: the modules listed below are the only acceptable modules at this
     #       time.
     cauthdsl:   warning
-    gossip:     warning
-    grpc:       error
+    gossip:     info
+    grpc:       debug
     ledger:     info
     msp:        warning
     policies:   warning
     peer:
-        gossip: warning
+        gossip: info
 
     # Message format for the peer logs
     format: '%{color}%{time:2006-01-02 15:04:05.000 MST} [%{module}] %{shortfunc} -> %{level:.4s} %{id:03x}%{color:reset} %{message}'
@@ -146,7 +146,7 @@ peer:
         # connection with ordering service and use delivery protocol
         # to pull ledger blocks from ordering service. It is recommended to
         # use leader election for large networks of peers.
-        useLeaderElection: true
+        useLeaderElection: false
         # Statically defines peer to be an organization "leader",
         # where this means that current peer will maintain connection
         # with ordering service and disseminate block across peers in
@@ -273,7 +273,7 @@ peer:
     # not mutual TLS auth. See comments on chaincodeListenAddress for more info
     tls:
         # Require server-side TLS
-        enabled:  true
+        enabled:  false
         # Require client certificates / mutual TLS.
         # Note that clients that are not configured to use a certificate will
         # fail to connect to the peer.
@@ -639,14 +639,14 @@ ledger:
        # not map the CouchDB container port to a server port in docker-compose.
        # Otherwise proper security must be provided on the connection between
        # CouchDB client (on the peer) and server.
-       couchDBAddress: 127.0.0.1:5984
+      # couchDBAddress: 127.0.0.1:5984
        # This username must have read and write authority on CouchDB
-       username:
+      # username:
        # The password is recommended to pass as an environment variable
        # during start up (eg LEDGER_COUCHDBCONFIG_PASSWORD).
        # If it is stored here, the file must be access control protected
        # to prevent unintended users from discovering the password.
-       password:
+       #password:
        # Number of retries for CouchDB errors
        maxRetries: 3
        # Number of retries for CouchDB errors during peer startup
